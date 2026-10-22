@@ -1,8 +1,15 @@
 \documentclass[10pt,a4paper]{article}
 
 % - Packages
-\usepackage[margin=0.6in]{geometry}
+\usepackage[margin=0.55in]{geometry}
 \usepackage[T1]{fontenc}
+
+% - Typography: Source Serif for body, Source Sans for headings, Source Code for identifiers
+\usepackage{sourceserifpro}
+\usepackage[scaled=0.92]{sourcesanspro}
+\usepackage{sourcecodepro}
+\usepackage{microtype}
+
 \usepackage{fontawesome5}
 \usepackage{xcolor}
 \usepackage[hidelinks]{hyperref}
@@ -15,40 +22,43 @@
 
 % - Colors
 \definecolor{accent}{HTML}{1a237e}
+\definecolor{accentlight}{HTML}{3949ab}
 \definecolor{lightgray}{HTML}{e0e0e0}
+\definecolor{bodytext}{HTML}{1c1f26}
 
 % - Page Style
 \pagestyle{empty}
 \setlength{\parindent}{0pt}
 \setlist{nosep, left=1.5em, labelindent=0pt, listparindent=0pt}
+\color{bodytext}
 
 % - Section Formatting
-\titleformat{\section}{\Large\bfseries\color{accent}}{}{0em}{}[\vspace{-0.3em}\rule{\textwidth}{0.5pt}]
-\titlespacing{\section}{0pt}{1.2em}{0.6em}
+\titleformat{\section}{\sffamily\large\bfseries\color{accent}}{}{0em}{}[\vspace{-0.35em}{\color{accentlight}\rule{\textwidth}{0.6pt}}]
+\titlespacing{\section}{0pt}{1.0em}{0.45em}
 
 % - Custom subsection (Project titles)
 \newcommand{\project}[2]{%
-  \par\vspace{0.6em}%
-  {\large\bfseries #1}%
+  \par\vspace{0.55em}%
+  {\sffamily\bfseries #1}%
   \hfill{\small\itshape #2}\par%
-  \vspace{0.2em}%
+  \vspace{0.15em}%
 }
 
 \newcommand{\role}[3]{%
-  \par\vspace{0.6em}%
-  {\bfseries #1} \hfill {\itshape #2}%
+  \par\vspace{0.55em}%
+  {\sffamily\bfseries #1} \hfill {\small\itshape #2}%
   \par {\small #3}\par%
-  \vspace{0.2em}%
+  \vspace{0.15em}%
 }
 
 \begin{document}
 
 % ========== HEADER ==========
 \begin{center}
-  {\Huge\bfseries Leonard Sambu\par}
-  \vspace{0.3em}
-  {\large\color{accent} Security Researcher \textbar\ Smart Contract Auditor \textbar\ AI Agent Engineer \textbar\ Fullstack Developer\par}
-  \vspace{0.5em}
+  {\sffamily\bfseries\fontsize{30}{34}\selectfont\textls[120]{Leonard Sambu}\par}
+  \vspace{0.35em}
+  {\sffamily\textls[60]{\large\color{accent} Security Researcher \textbar\ Smart Contract Auditor \textbar\ AI Agent Engineer \textbar\ Fullstack Developer}\par}
+  \vspace{0.55em}
   \small
   {\faPhone}\ +254 739 720 531 \quad
   {\faEnvelope}\ \href{mailto:cheruiyootsambu@gmail.com}{cheruiyootsambu@gmail.com} \quad
@@ -62,11 +72,17 @@
 % ========== PROFESSIONAL SUMMARY ==========
 \section{Professional Summary}
 \small
-I find bugs in DeFi protocols for a living. I've audited 40+ protocols (including Frax, GMX, PancakeSwap, and Morpho) and disclosed critical vulnerabilities like an sfrxETH underflow and signature bypasses that could have drained millions. I write PoCs in Foundry, run the edge cases others skip, and I don't stop until the attack surface is clean.
+\setlength{\parskip}{0.5em}
+Most of my work is finding bugs in code that holds other people's money, then writing the proof that stops anyone from waving them away.
 
-Beyond auditing, I build. I ship fullstack production apps, including a live dairy cooperative management system in Kenya (\href{https://maziwa-coop.pages.dev}{maziwa-coop.pages.dev}) and a farm management PWA that replaced paper records with a serverless edge stack. I speak Solidity, React, Hono, and whatever infra gets the job done. I also orchestrate AI agents to automate scanning, log analysis, and exploit generation.
+Across roughly 60 bug bounty programs on HackenProof, Cantina, Bugcrowd, Intigriti and Immunefi --- 20 of them smart contract audits --- the findings I am proudest of are arithmetic ones. An underflow in Frax's sfrxETH withdrawal path, where a cached \texttt{totalAssets} drifts against the live figure and strands LP redemptions. A payout path in tokenize.it where a caller-supplied base price lets a coininvestor walk off with an entire exit. Both ship as runnable Foundry proof-of-concepts, the sfrxETH one against a live mainnet fork. I run the audits with AI agents in parallel lanes and then verify every claim myself.
 
-All of this sits on a foundation of running teams across media, education, and tech, enabling me to talk to devs, executives, and farmers with equal fluency.
+A large share of that work ends with me not filing. Three of my own reports were closed by triagers, two of them as intended behaviour, so I work to a written gate that stops me filing anything a privileged role could reach, and I built the tooling around it: \texttt{c0bw3b}, a 13,000-line Python pipeline with 31 modules and 107 passing tests, MIT licensed and installed as a CLI.
+
+I build as much as I break. C. Sambu Farm Manager replaced the physical payroll workbook of a tea estate running 20--30 pluckers and 12--39 tonnes of green leaf a month, and now prices piece-rate, day-rate and prorated pay in one engine. Maziwa Coop (\href{https://maziwa-coop.pages.dev}{maziwa-coop.pages.dev}) sends dairy farmers their delivery confirmation by SMS and generates the month-end statements they used to write by hand. The CRUD was never the hard part --- the domain was: a feed-ration solver built on KALRO nutrient tables, tea factory rates that change by effective date, and dates that stay correct in EAT. I also take paid incident response and forensics on WordPress estates, and build lead pipelines on Cloudflare.
+
+I run teams across media, education and tech, so I can sit with a farmer over their deduction statement and with an auditor who thinks their finding will not pay.
+\setlength{\parskip}{0pt}
 \normalsize
 
 % ========== TECHNICAL SKILLS ==========
@@ -91,15 +107,14 @@ Other & Linux, Windows, macOS, DaVinci Resolve, OBS Studio, Google Workspace, Mi
 \role{Security Researcher \& Bug Bounty Hunter}{Independent}{2024 to Present}
 
 \begin{itemize}[leftmargin=1.2em]
-  \item Conduct independent security audits across 40+ Web3 protocols (Frax, GMX) and 15+ Web2 targets on platforms like HackenProof and HackerOne.
-  \item Discovered and responsibly disclosed high-severity vulnerabilities including a critical Blind Stored XSS leading to PII leakage and an IDOR enabling unauthorized resource manipulation.
-  \item Develop comprehensive proof-of-concept exploits using Foundry with mainnet-fork verification for Web3, and custom attack chains for Web2.
-  \item Leverage custom automated reconnaissance pipelines (c0bw3b) and AI/LLM-powered agentic tooling for vulnerability scanning, log analysis, and exploit generation.
-  \item Produce detailed, triage-ready vulnerability reports with severity classification, root cause analysis, and remediation recommendations.
+  \item Audited 20 smart contract codebases (Frax, Paxos, USDai, Cetus, Revert, Alberich, Zendex, DreamX) and worked 40+ web2 programs on HackenProof, Cantina, Bugcrowd, Intigriti and Immunefi.
+  \item Reported an arithmetic underflow in Frax's sfrxETH withdrawal path, where a cached \texttt{totalAssets} drifts against accrued rewards and strands LP redemptions, and a caller-supplied base price in tokenize.it's exit payout that let a coininvestor take 100\% of the exit proceeds; both shipped as runnable Foundry proof-of-concepts, the first verified against a live mainnet fork.
+  \item Found a critical blind stored XSS that executed inside an internal backoffice application and exposed national ID numbers and phone numbers, and an IDOR in a B2B platform that was triaged and rewarded.
+  \item Built the verification to match: Foundry, Hardhat and Sui test suites, mainnet forks, gas measurement and on-chain state reads, plus a standing filing gate that keeps privileged-role findings out of the queue before a judge sees them.
+  \item Ran the audits with AI agents in parallel lanes across governance, ledger and write-path surfaces, then confirmed every claim by hand and wrote triage-ready reports with severity classification, root cause analysis, remediation steps, and the dismissal vectors already considered.
 \end{itemize}
 
 % ========== PROJECTS ==========
-\newpage
 \section{Projects \& Portfolio}
 \vspace{0.3em}
 {\small\itshape Note: For an exhaustive list of all tools, agents, and applications I have built, please visit my interactive portfolio at \href{https://llakterian.github.io}{llakterian.github.io}.}\par
@@ -108,20 +123,32 @@ Other & Linux, Windows, macOS, DaVinci Resolve, OBS Studio, Google Workspace, Mi
 \project{Maziwa Coop: Milk Cooperative Management System}
 {\href{https://maziwa-coop.pages.dev}{maziwa-coop.pages.dev}}
 \small
-Production-deployed full-stack platform serving Kenyan dairy cooperatives, replacing paper-based records with a digital system handling daily milk delivery recording, farmer management, SMS notifications (Africa's Talking), facility credit tracking, and multi-type reporting. Features role-based access (admin/clerk), JWT authentication, auto-generated ticket numbering, real-time dashboard with collection trend charts (Recharts), and CSV export. Designed with a clean SMS provider abstraction layer (strategy pattern). Deployed serverlessly on Cloudflare Workers + D1. Backend: Hono.js on Cloudflare Workers. Frontend: React 19 + Zustand + Vite.
+Production-deployed platform for Kenyan dairy cooperatives, replacing paper delivery records with daily milk logging, auto-generated ticket numbering, Africa's Talking SMS confirmations sent to farmers, milking-can credit tracking and CSV reporting. The SMS provider sits behind an abstraction, so it can be swapped without touching the core. Tech: React 19, Hono.js on Cloudflare Workers, D1, Zustand, Recharts.
 \normalsize
 
 \project{C. Sambu Farm Manager: Full-Stack Farm Management PWA}
   {\href{https://cs-farm-api.llakterian.workers.dev}{Live API}}
 \small
-Comprehensive PWA for managing a multi-sector Kenyan agribusiness (tea, dairy, avocado, poultry). Features a variable payroll engine supporting piece-rate (KES 9/kg), day-rate (KES 216/day), and prorated salary modes, production logging across 5 sectors, expense tracking, domestic loan management, real-time weather intelligence (Open-Meteo, 14 Kenyan farming regions), and factory-level financial reporting with CSV export. Migrated from local IndexedDB/FastAPI/Docker to serverless Cloudflare Workers + D1. Implements JWT auth, column-whitelist SQL injection defense, Workbox-powered offline caching with "Add to Home Screen" PWA support, and print-optimized report layouts. Tech: React 18, Tailwind CSS, Hono.js, Recharts, Headless UI, vite-plugin-pwa.
+PWA for a multi-sector Kenyan agribusiness (tea, dairy, avocado, poultry) that replaced a physical payroll workbook covering 20--30 pluckers and 12--39 tonnes of green leaf a month. A single payroll engine prices piece-rate (KES 9/kg), day-rate and prorated salary. Also a feed-ration solver built on KALRO nutrient tables, effective-dated tea factory rates, Open-Meteo weather across 14 Kenyan regions, and Workbox offline caching. Migrated from local IndexedDB/FastAPI/Docker to Cloudflare Workers + D1.
+\normalsize
+
+\project{Shambani: AI Agronomy \& Weather Advisory}
+{\href{https://shambani-app.pages.dev}{shambani-app.pages.dev}}
+\small
+Weather intelligence for all 47 Kenyan counties: current conditions, 7-day forecast and AI agronomic advice grounded in KALRO, Tea Research Foundation of Kenya and Ministry of Agriculture extension guidelines, plus livestock feed profiling. Keys stay server-side behind a single proxy chokepoint, with a 5-minute cache that falls back to stale data on upstream failure. Tech: FastAPI + Cloudflare Pages Functions, Groq (gpt-oss-20b), Open-Meteo, vanilla-JS PWA.
+\normalsize
+
+\project{QuitVaping: AI Cessation Platform}
+{\href{https://quitvaping.netlify.app}{quitvaping.netlify.app}}
+\small
+Production Flutter web PWA for nicotine cessation: abstinence tracking, health-recovery timeline, savings calculator, an AI coach, craving-pattern analysis, guided panic-mode breathing, NRT tracking and community support, monetised through RevenueCat. Ships a full Model Context Protocol client stack and a Supabase backend with edge functions and web push. 36,000 lines of Dart across 117 files, backed by a Postman/Newman API test suite.
 \normalsize
 
 \project{c0bw3b Toolkit: Automated Reconnaissance \& Vulnerability Scanner}{}
-\small Custom-built automated security scanning pipeline for Web2 bug bounty. Features JavaScript secret extraction, asynchronous port scanning, historical URL collection, and integrated attack chain detection for CORS, IDOR, SQLi, and SSRF.\normalsize
+\small Custom automated scanning pipeline for Web2 bug bounty. 13,000 lines of Python across 31 decorator-registered modules: passive and active recon, JavaScript secret extraction, port scanning, historical URL collection, CORS/IDOR/SQLi/SSRF detection, false-positive verification and attack-chain correlation. 107 passing tests. MIT licensed, installs as a \texttt{c0bw3b} CLI.\normalsize
 
-\project{CVEScan: AI-Powered CVE Vulnerability Scanner}{}
-\small Orchestrates AI agents (Gemini) and tools (Bandit, Semgrep) for real-time CVE monitoring and automated report generation.\normalsize
+\project{CVEScan: CVE Monitoring \& Web Scan Pipeline}{}
+\small Self-hosted eight-stage web scanner (tech fingerprinting, security headers, critical paths, directory brute force, JavaScript analysis, API discovery, injection testing, CORS/CSRF) that also monitors NVD, MITRE and GitHub Advisory feeds and emits LaTeX/PDF reports. 6,400 lines of TypeScript with a scheduler and webhook notifications.\normalsize
 
 \project{Curated Feed: AI Content Curation Engine}{}
 \small Digital autonomy engine integrating Groq API (Llama 3.3 70B) for real-time curation with KV storage.\normalsize
@@ -129,17 +156,17 @@ Comprehensive PWA for managing a multi-sector Kenyan agribusiness (tea, dairy, a
 \project{BotIn: Decentralized AI Agent Network}{}
 \small Decentralized AI agent professional network utilizing ERC-8004 for agentic identities and XMTP messaging.\normalsize
 
-\project{KinSync: Digital Estate Vault on Base}{}
-\small Next-of-Kin digital estate vault smart contract on Base, automating decentralized IPFS content authorization.\normalsize
+\project{FinPro: Decentralized Project \& Finance Platform}{}
+\small Delivered to a client under a conditional source-available licence: escrow-based project payments, an ERC-20 token, a swap module, a multisig treasury, EIP-4337 gasless accounts with a token paymaster, and a Telegram Mini App. 7 audited Solidity contracts with 33 passing Hardhat tests and Playwright end-to-end coverage; Supabase with row-level security, Stripe checkout, and a TON sidechain data registry.\normalsize
+
+\project{KinSync: Digital Estate Vault (Front-End Prototype)}{}
+\small Next-of-Kin digital estate vault prototype: wallet-linked vault dashboard, legacy record sync and emergency delegate status. React 19, Vite, wallet connection, mock data.\normalsize
 
 \project{NimbusTrade: Web3 Arbitrage Dashboard}{}
 \small Web3 arbitrage dashboard combining Polymarket CLOB APIs and Gemini-powered Expected Value logic.\normalsize
 
 \project{PicKut AI: AI Image Editing Suite}{}
 \small Professional image editing suite powered by Gemini 2.5 Flash Image, featuring ERC-8004 agentic Web3 payments.\normalsize
-
-\project{FinPro: High-Performance Financial Platform}{}
-\small Financial platform integrating Next.js, Supabase, and automated Playwright test suites.\normalsize
 
 \project{Uplift News: Multi-Language News Platform}{}
 \small Multi-language platform built with React, Cloudflare Workers, D1 database, and Groq AI for content curation.\normalsize
@@ -150,6 +177,7 @@ Comprehensive PWA for managing a multi-sector Kenyan agribusiness (tea, dairy, a
 \role{Project Manager}{SIZLAND Limited}{Nov 2025 to Mar 2026}
 \begin{itemize}[leftmargin=1.5em]
   \item Orchestrated Agile and Scrum workflows in a Web3 environment, optimizing task allocation and sprint delivery via JIRA and Trello.
+  \item Delivered a 39,000-line content curation platform and a notary-mediated escrow system with smart contracts, front-end ABIs and handover documentation, invoiced against the consultancy agreement.
   \item Anticipated and mitigated project risks, conflicts, and cross-team dependencies through proactive strategies.
   \item Partnered with development and QA teams to rigorously validate deliverables, ensuring technical and functional excellence.
   \item Directed stand-ups, sprint reviews, and retrospectives; served as central liaison between developers, executives, and external partners.
@@ -164,10 +192,10 @@ Comprehensive PWA for managing a multi-sector Kenyan agribusiness (tea, dairy, a
 
 \role{Technology Consultant \& Developer}{Self-Employed}{Sep 2023 to Present}
 \begin{itemize}[leftmargin=1.5em]
-  \item Built and deployed production full-stack applications (Maziwa Coop, Sambu Farm Manager) on Cloudflare's serverless edge infrastructure with JWT auth, role-based access, and real-world Kenyan market adoption.
-  \item Architected robust data pipelines integrating Meta Lead Ads with CRM tools using Zapier, Cloudflare Workers, and Cloudflare KV with strict deduplication.
+  \item Built and deployed production full-stack applications (Maziwa Coop, Sambu Farm Manager) on Cloudflare's serverless edge infrastructure with JWT auth, role-based access, and schema migrations applied live against production D1.
+  \item Ran paid incident response and forensics on WordPress estates: recovered a client across four outage episodes, removed a PHP webshell and eight hidden administrator accounts, rotated salts, and cut TTFB from 30+ seconds to 1.1 seconds.
+  \item Architected a production lead pipeline connecting Meta Lead Ads to a CRM through Cloudflare Workers and KV, including a Zapier bridge that works around Meta's App Review restriction on direct lead webhooks, with deduplication and a 90-day audit trail.
   \item Engineered and audited Solidity smart contracts using static analysis tools (Slither, Mythril); reduced exploit risk surface by 40\%.
-  \item Guided early-stage startups on technology stack selection, championing scalable and secure fullstack architectures.
   \item Created blockchain security educational content on TikTok (@tech\_ale).
 \end{itemize}
 
@@ -199,34 +227,20 @@ Comprehensive PWA for managing a multi-sector Kenyan agribusiness (tea, dairy, a
   \item \href{https://drive.google.com/file/d/1c48EGdqSb5MEZc-V16A7E3OrAWnvODHN/view?usp=drive_web}{Solidity Smart Contract Development} (Cyfrin Updraft)
   \item \href{https://drive.google.com/file/d/1c48EGdqSb5MEZc-V16A7E3OrAWnvODHN/view?usp=drive_web}{Smart Contract Security} (Cyfrin Updraft)
   \item \href{https://coursera.org/verify/4RM7245JXEF5}{Cybersecurity Awareness and Innovation} (EIT Digital / Coursera)
-  \item \href{https://coursera.org/verify/UJH5UGLBATSG}{Develop a Company Website with Wix} (Coursera Project Network)
-  \item \href{https://coursera.org/verify/6TBTU975LDAB}{Leveraging Virtual Assistants for Personal Productivity} (Coursera)
-  \item \href{https://drive.google.com/file/d/1UM1mJUvmo2YlLkKptVxY9j7VMMg9VqgF/view?usp=drive_web}{Learn HTML Course} (Course Completion)
   \item Digital Forensics Masterclass: Forensic Science DFMC+ (Udemy)
 \end{itemize}
 
 \vspace{0.3em}
 \textbf{Security \& Defense Training}
 \begin{itemize}[leftmargin=1.5em]
-  \item \href{https://drive.google.com/file/d/1-C4SY6K5gdFM5vTcEyVnQ1uzsKtoqQoG/view?usp=drive_web}{Cybersecurity Awareness} (DCSA / CDSE)
-  \item \href{https://drive.google.com/file/d/1zzsQ-ZCfjNTeQGPx8N7Qs_MOjH6TOqkY/view?usp=drive_web}{Establishing an Insider Threat Program} (DCSA)
-  \item \href{https://drive.google.com/file/d/1-Uew1_UXOZh6Uv7zgFIWwvTus1Xfxx63/view?usp=drive_web}{Insider Threat Awareness} (DCSA)
-  \item \href{https://drive.google.com/file/d/1-iOpGa1krxzGGllX9r116QXHK_Q3n2ME/view?usp=drive_web}{Maximizing Organizational Trust} (DCSA)
+  \item \href{https://drive.google.com/file/d/1-C4SY6K5gdFM5vTcEyVnQ1uzsKtoqQoG/view?usp=drive_web}{Cybersecurity Awareness}, \href{https://drive.google.com/file/d/1zzsQ-ZCfjNTeQGPx8N7Qs_MOjH6TOqkY/view?usp=drive_web}{Establishing an Insider Threat Program}, \href{https://drive.google.com/file/d/1-Uew1_UXOZh6Uv7zgFIWwvTus1Xfxx63/view?usp=drive_web}{Insider Threat Awareness} and \href{https://drive.google.com/file/d/1-iOpGa1krxzGGllX9r116QXHK_Q3n2ME/view?usp=drive_web}{Maximizing Organizational Trust} (DCSA / CDSE)
 \end{itemize}
 
 \vspace{0.3em}
-\textbf{Personal Development \& Soft Skills}
-\begin{itemize}[leftmargin=1.5em]
-  \item \href{https://drive.google.com/file/d/11zB_uqehPMh4DSoYTJjYLYeiHQ0ppJ2h/view?usp=drive_web}{Non-Technical Life Skills} (Course Completion)
-  \item \href{https://drive.google.com/file/d/1tvmXD4JFJcB9--nSBNPSQ_fMUfUNGBwb/view?usp=drive_web}{Guitar Knowledge Level 1} (Yousician)
-  \item Great Learning Verification Portal
-\end{itemize}
-
 % ========== EDUCATION ==========
 \section{Education}
 
 \begin{tabular}{l l l}
-  CompTIA Cloud+ (CV0-003) Specialization & Coursera & In Progress \\
   B.A. International Relations \& Diplomacy with I.T. & Maseno University & 2008 to Present \\
   Certificate in HTML Web Language & Star College & 2008 \\
   Kenya Certificate of Secondary Education & Milimani High School & 2006 to 2007

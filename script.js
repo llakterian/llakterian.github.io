@@ -5,7 +5,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "Bug Bounty Hunter",
         "Smart Contract Auditor",
         "AI Agent Engineer",
-        "Fullstack Web3 Dev"
+        "Full-Stack Web3 Dev",
+        "Cloudflare Edge Engineer"
     ];
     let roleIndex = 0;
     let charIndex = 0;

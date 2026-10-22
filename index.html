@@ -40,6 +40,9 @@
                 <a href="https://linkedin.com/in/cheruiyoot-sambu" target="_blank">LinkedIn</a>
                 <a href="Sambu_Leonard_CV.pdf" target="_blank" class="btn-primary-gradient">Download CV</a>
             </div>
+            <p style="max-width: 680px; margin: 28px auto 0; color: var(--text-secondary); font-size: 15px; line-height: 1.85;">
+                I audit smart contracts and web applications across HackenProof, Cantina, Bugcrowd and Immunefi, then ship the products I build for the people who can't hire a security team &mdash; farm management for Kenyan tea estates and dairy cooperatives, and weather intelligence for all 47 counties.
+            </p>
         </div>
     </header>
 
@@ -93,14 +96,17 @@
             </div>
             <div class="glass-card skill-card reveal">
                 <div class="skill-card-icon">💻</div>
-                <h3>Fullstack & Tools</h3>
+                <h3>Fullstack &amp; Tools</h3>
                 <div class="skill-tags">
                     <span class="skill-tag green">JavaScript</span>
                     <span class="skill-tag green">TypeScript</span>
                     <span class="skill-tag green">Python</span>
-                    <span class="skill-tag green">React.js & Next.js</span>
+                    <span class="skill-tag green">React.js &amp; Next.js</span>
                     <span class="skill-tag green">Node.js</span>
-                    <span class="skill-tag green">Cloudflare</span>
+                    <span class="skill-tag green">Hono.js</span>
+                    <span class="skill-tag green">Cloudflare Workers</span>
+                    <span class="skill-tag green">Flutter</span>
+                    <span class="skill-tag green">FastAPI</span>
                     <span class="skill-tag green">Docker</span>
                     <span class="skill-tag green">CI/CD</span>
                 </div>
@@ -123,15 +129,15 @@
         <div id="web2" class="research-panel active reveal">
             <div class="stats-bar">
                 <div class="stat-item">
-                    <div class="stat-number">21</div>
-                    <div class="stat-label">Submissions</div>
+                    <div class="stat-number">44</div>
+                    <div class="stat-label">Programs Worked</div>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-number">15+</div>
+                    <div class="stat-number">40+</div>
                     <div class="stat-label">Targets</div>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-number">2</div>
+                    <div class="stat-number">7</div>
                     <div class="stat-label">Platforms</div>
                 </div>
             </div>
@@ -191,7 +197,7 @@
                     <p>Identified and exploited an Insecure Direct Object Reference vulnerability where sequential numeric identifiers allowed unauthenticated manipulation and deletion of other users' addresses, demonstrating a complete breakdown of server-side authorization checks.</p>
                 </div>
                 <div class="glass-card method-card">
-                    <span class="method-badge critical">Critical Impact</span>
+                    <span class="method-badge critical">PII Exposure</span>
                     <h4>Blind Stored XSS to PII Leak</h4>
                     <p>Successfully injected a Blind XSS payload into a public registration form that later executed within an internal, authenticated backoffice dashboard, leading to the unauthorized disclosure of highly sensitive user PII (National IDs, Phone Numbers).</p>
                 </div>
@@ -201,17 +207,17 @@
         <div id="web3" class="research-panel reveal">
              <div class="stats-bar">
                 <div class="stat-item">
-                    <div class="stat-number">40+</div>
+                    <div class="stat-number">20</div>
                     <div class="stat-label">Protocols Audited</div>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-number">10+</div>
-                    <div class="stat-label">High/Critical Findings</div>
+                    <div class="stat-number">6</div>
+                    <div class="stat-label">Reportable Findings</div>
                 </div>
             </div>
             
             <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 30px;">
-                Conduct independent security audits of smart contracts across leading DeFi protocols including Frax, GMX, PancakeSwap, and Morpho. Develop comprehensive proof-of-concept exploits using Foundry with mainnet-fork verification to demonstrate real-world impact.
+                Conduct independent security audits of smart contracts across DeFi and L2 protocols including Frax, Paxos, USDai, Cetus, Revert, Alberich and Zendex. Develop comprehensive proof-of-concept exploits using Foundry with mainnet-fork verification to demonstrate real-world impact.
             </p>
 
             <div class="target-list">
@@ -225,9 +231,9 @@
                     </div>
                     <div class="target-tags">
                         <span>sfrxETH underflow</span>
-                        <span>Signature Bypasses</span>
-                        <span>Reentrancy</span>
-                        <span>Vault Manipulation</span>
+                        <span>Exit Payout Drain</span>
+                        <span>Storage Growth DoS</span>
+                        <span>Access Control State</span>
                     </div>
                 </div>
                  <div class="glass-card target-card">
@@ -240,10 +246,13 @@
                     </div>
                     <div class="target-tags">
                         <span>Frax</span>
-                        <span>GMX</span>
-                        <span>PancakeSwap</span>
-                        <span>Morpho</span>
-                        <span>KINZA</span>
+                        <span>Paxos</span>
+                        <span>USDai</span>
+                        <span>Cetus</span>
+                        <span>Revert</span>
+                        <span>Alberich</span>
+                        <span>Zendex</span>
+                        <span>DreamX</span>
                     </div>
                 </div>
             </div>
@@ -253,13 +262,13 @@
     <section id="toolkit" class="section">
         <div class="section-header reveal">
             <h2>c0bw3b <span class="gradient-text">Toolkit</span></h2>
-            <p>A custom-built automated reconnaissance and vulnerability scanning pipeline powering my bug bounty operations.</p>
+            <p>13,000 lines of Python across 31 modules and 107 passing tests, automating the reconnaissance and verification work behind my bug bounty practice.</p>
             <div class="section-divider"></div>
         </div>
         <div class="toolkit-layout reveal">
             <div class="toolkit-info">
-                <h3>Automated Recon & Exploitation</h3>
-                <p>The c0bw3b toolkit automates the tedious aspects of bug hunting, chaining together customized modules for deep reconnaissance and vulnerability detection across massive attack surfaces.</p>
+                <h3>Automated Recon &amp; Verification</h3>
+                <p>The c0bw3b toolkit automates the tedious aspects of bug hunting, chaining together customized modules for deep reconnaissance and vulnerability detection across massive attack surfaces. Every module self-registers through a decorator-based dispatcher, so the pipeline is assembled at runtime rather than hard-coded.</p>
                 <ul class="toolkit-features">
                     <li>Comprehensive JavaScript secret analysis and extraction</li>
                     <li>Integrated Nuclei scanning with custom templates</li>
@@ -300,43 +309,79 @@
     <section id="projects" class="section">
         <div class="section-header reveal">
             <h2>Key <span class="gradient-text">Projects</span></h2>
-            <p>Fullstack applications bridging Web3, Artificial Intelligence, and advanced automation.</p>
+            <p>Production applications spanning farm management, African agronomy, Web3 and AI tooling.</p>
             <div class="section-divider"></div>
         </div>
         <div class="project-grid">
             <div class="glass-card project-card reveal">
-                <h4>CVEScan</h4>
-                <p>Professional vulnerability scanner orchestrating AI agents (Gemini) and tools (Bandit, Semgrep) for real-time CVE monitoring and automated report generation.</p>
-                <div class="project-tech-tags">
-                    <span>AI Agents</span><span>Gemini</span><span>Semgrep</span>
-                </div>
-            </div>
-            <div class="glass-card project-card reveal">
-                <h4>Uplift</h4>
-                <p>A production-ready good news aggregation platform built with React, TypeScript, and Cloudflare Workers for real-time curation.</p>
+                <h4>C. Sambu Farm Manager</h4>
+                <p>A full-stack PWA that replaced the physical payroll workbook of a Kenyan tea estate running 20–30 pluckers and 12–39 tonnes of green leaf a month. One payroll engine prices piece-rate, day-rate and prorated pay; a feed-ration solver built on KALRO nutrient tables handles livestock diets. Migrated from local IndexedDB/FastAPI/Docker to Cloudflare Workers + D1.</p>
                 <div class="project-links">
-                    <a href="https://github.com/llakterian/uplift" target="_blank">GitHub</a>
-                    <a href="https://uplift.llakterian.workers.dev/" target="_blank">Live App</a>
+                    <a href="https://sambufarm-demo.pages.dev" target="_blank">Live App</a>
+                    <a href="https://cs-farm-api.llakterian.workers.dev" target="_blank">Live API</a>
                 </div>
                 <div class="project-tech-tags">
-                    <span>React</span><span>Cloudflare</span><span>TypeScript</span>
+                    <span>React 18</span><span>Hono</span><span>Cloudflare D1</span><span>PWA</span>
                 </div>
             </div>
             <div class="glass-card project-card reveal">
-                <h4>Curated Feed</h4>
-                <p>Digital autonomy engine integrating Groq API (Llama 3.3 70B) for real-time curation and high-performance KV storage.</p>
+                <h4>Maziwa Coop</h4>
+                <p>Production platform for Kenyan dairy cooperatives, replacing paper delivery records with daily milk logging, Africa's Talking SMS confirmations sent to farmers, milking-can credit tracking and CSV reporting. The SMS provider sits behind an abstraction so it can be swapped without touching the core.</p>
+                <div class="project-links">
+                    <a href="https://maziwa-coop.pages.dev" target="_blank">Live App</a>
+                </div>
                 <div class="project-tech-tags">
-                    <span>Groq API</span><span>Llama 3.3</span><span>KV Storage</span>
+                    <span>React 19</span><span>Hono</span><span>Africa's Talking</span>
+                </div>
+            </div>
+            <div class="glass-card project-card reveal">
+                <h4>Shambani</h4>
+                <p>Weather intelligence for all 47 Kenyan counties: current conditions, 7-day forecast and AI agronomic advice grounded in KALRO, Tea Research Foundation of Kenya and Ministry of Agriculture extension guidelines, plus livestock feed profiling. API keys stay server-side, with a stale-on-error response cache.</p>
+                <div class="project-links">
+                    <a href="https://shambani-app.pages.dev" target="_blank">Live App</a>
+                </div>
+                <div class="project-tech-tags">
+                    <span>FastAPI</span><span>Cloudflare Functions</span><span>Groq</span>
+                </div>
+            </div>
+            <div class="glass-card project-card reveal">
+                <h4>QuitVaping</h4>
+                <p>Production Flutter web PWA for nicotine cessation: abstinence tracking, health-recovery timeline, savings calculator, an AI coach, craving-pattern analysis and guided panic-mode breathing, monetised through RevenueCat. Ships a full Model Context Protocol client stack. 36,000 lines of Dart across 117 files.</p>
+                <div class="project-links">
+                    <a href="https://quitvaping.netlify.app" target="_blank">Live App</a>
+                </div>
+                <div class="project-tech-tags">
+                    <span>Flutter</span><span>Supabase</span><span>MCP</span>
+                </div>
+            </div>
+            <div class="glass-card project-card reveal">
+                <h4>FinPro</h4>
+                <p>Decentralized project and finance platform delivered to a client: escrow-based payments, an ERC-20 token, a swap module, a multisig treasury, EIP-4337 gasless accounts with a token paymaster, and a Telegram Mini App. 7 audited Solidity contracts with 33 passing Hardhat tests.</p>
+                <div class="project-links">
+                    <a href="https://fin1pro.vercel.app" target="_blank">Live App</a>
+                </div>
+                <div class="project-tech-tags">
+                    <span>Solidity</span><span>EIP-4337</span><span>Hardhat</span>
                 </div>
             </div>
             <div class="glass-card project-card reveal">
                 <h4>BotIn</h4>
-                <p>Decentralized AI agent professional network utilizing ERC-8004 for agentic identities and XMTP messaging.</p>
+                <p>Decentralized AI agent professional network utilizing ERC-8004 for agentic identities, on-chain reputation and XMTP messaging.</p>
                  <div class="project-links">
                     <a href="https://botinn.netlify.app/" target="_blank">Live App</a>
                 </div>
                 <div class="project-tech-tags">
                     <span>ERC-8004</span><span>XMTP</span><span>Web3</span>
+                </div>
+            </div>
+            <div class="glass-card project-card reveal">
+                <h4>Uplift</h4>
+                <p>A positive-news aggregation platform built with React, TypeScript and Cloudflare Workers, classifying stories with a bilingual English/Swahili Groq classifier and serving them as an installable PWA with push notifications.</p>
+                <div class="project-links">
+                    <a href="https://uplift.llakterian.workers.dev/" target="_blank">Live App</a>
+                </div>
+                <div class="project-tech-tags">
+                    <span>React</span><span>Cloudflare</span><span>TypeScript</span>
                 </div>
             </div>
             <div class="glass-card project-card reveal">
@@ -349,18 +394,45 @@
                     <span>Polymarket</span><span>Gemini AI</span>
                 </div>
             </div>
-             <div class="glass-card project-card reveal">
-                <h4>KinSync</h4>
-                <p>Next-of-Kin digital estate vault smart contract on Base, automating decentralized IPFS content authorization.</p>
+            <div class="glass-card project-card reveal">
+                <h4>PicKut AI</h4>
+                <p>Professional image editing suite powered by Gemini 2.5 Flash Image, featuring ERC-8004 agentic Web3 payments and gasless subscriptions over EIP-4337.</p>
+                <div class="project-links">
+                    <a href="https://pickut.netlify.app/" target="_blank">Live App</a>
+                </div>
                 <div class="project-tech-tags">
-                    <span>Base</span><span>IPFS</span><span>Smart Contracts</span>
+                    <span>Gemini</span><span>ERC-8004</span><span>Solidity</span>
                 </div>
             </div>
             <div class="glass-card project-card reveal">
-                <h4>FinPro</h4>
-                <p>High-performance financial platform integrating Next.js, Supabase, and automated Playwright test suites.</p>
+                <h4>Curated Feed</h4>
+                <p>Digital autonomy engine integrating Groq API (Llama 3.3 70B) for real-time curation with KV-backed caching and rate limiting across Reddit, Mastodon, Hacker News, Dev.to, YouTube and RSS.</p>
                 <div class="project-tech-tags">
-                    <span>Next.js</span><span>Supabase</span><span>Playwright</span>
+                    <span>Groq API</span><span>Llama 3.3</span><span>KV Storage</span>
+                </div>
+            </div>
+            <div class="glass-card project-card reveal">
+                <h4>CVEScan</h4>
+                <p>Self-hosted eight-stage web scanner that also monitors NVD, MITRE and GitHub Advisory feeds, folds in Bandit and Semgrep, and emits LaTeX/PDF reports.</p>
+                <div class="project-tech-tags">
+                    <span>TypeScript</span><span>Semgrep</span><span>NVD</span>
+                </div>
+            </div>
+            <div class="glass-card project-card reveal">
+                <h4>Nakuru City Hub</h4>
+                <p>Mobile-first community PWA for Nakuru residents and the diaspora, with Gemini-powered content polishing, geospatial grounding and speech synthesis.</p>
+                <div class="project-links">
+                    <a href="https://nakurucity.netlify.app/" target="_blank">Live App</a>
+                </div>
+                <div class="project-tech-tags">
+                    <span>React</span><span>Gemini</span><span>PWA</span>
+                </div>
+            </div>
+             <div class="glass-card project-card reveal">
+                <h4>KinSync</h4>
+                <p>Front-end prototype for a next-of-kin digital estate vault: wallet-linked vault dashboard, legacy record sync and emergency delegate status.</p>
+                <div class="project-tech-tags">
+                    <span>React 19</span><span>Vite</span><span>Prototype</span>
                 </div>
             </div>
         </div>
@@ -380,9 +452,10 @@
                     <span class="timeline-date">Sep 2023 - Present</span>
                 </div>
                 <ul class="timeline-body">
+                    <li>Built and deployed production full-stack applications (Maziwa Coop, Sambu Farm Manager) on Cloudflare's serverless edge infrastructure with JWT auth, role-based access, and schema migrations applied live against production D1.</li>
+                    <li>Ran paid incident response and forensics on WordPress estates: recovered a client across four outage episodes, removed a PHP webshell and eight hidden administrator accounts, rotated salts, and cut TTFB from 30+ seconds to 1.1 seconds.</li>
+                    <li>Architected a production lead pipeline connecting Meta Lead Ads to a CRM through Cloudflare Workers and KV, including a Zapier bridge that works around Meta's App Review restriction on direct lead webhooks.</li>
                     <li>Engineered and audited Solidity smart contracts using static analysis tools (Slither, Mythril); reduced exploit risk surface by 40%.</li>
-                    <li>Architected real-time data pipelines integrating Meta Lead Ads with CRM using Cloudflare Workers.</li>
-                    <li>Built fullstack solutions integrating React.js, Next.js, Node.js, and IPFS; prototyped DeFi lending platforms.</li>
                 </ul>
             </div>
             <div class="timeline-item reveal">
@@ -393,7 +466,7 @@
                 </div>
                 <ul class="timeline-body">
                     <li>Orchestrated Agile and Scrum workflows in a Web3 environment via JIRA and Trello.</li>
-                    <li>Partnered with QA teams to rigorously validate deliverables, ensuring technical excellence.</li>
+                    <li>Delivered a 39,000-line content curation platform and a notary-mediated escrow system with smart contracts, front-end ABIs and handover documentation, invoiced against the consultancy agreement.</li>
                 </ul>
             </div>
              <div class="timeline-item reveal">
