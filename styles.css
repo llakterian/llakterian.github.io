@@ -312,6 +312,9 @@ a:hover { color: var(--accent-blue); }
 }
 .cert-item .cert-name { font-size: 14px; color: var(--text-secondary); }
 .cert-item .cert-provider { font-size: 12px; color: var(--text-muted); }
+.cert-featured { border-color: rgba(16, 185, 129, 0.45); background: rgba(16, 185, 129, 0.06); }
+.cert-featured:hover { border-color: var(--accent-green); box-shadow: 0 0 24px rgba(16, 185, 129, 0.15); }
+.cert-featured .cert-name { color: var(--text-primary); font-weight: 600; }
 
 /* ── Footer ── */
 .footer {
