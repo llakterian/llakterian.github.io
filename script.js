@@ -111,4 +111,41 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // Stat Cards count-up
+    const statValues = document.querySelectorAll('.stat-value[data-target]');
+    const statObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && !entry.target.dataset.animated) {
+                entry.target.dataset.animated = 'true';
+                const el = entry.target;
+                const target = parseInt(el.dataset.target, 10);
+                let start = 0;
+                const duration = 1200;
+                const startTime = performance.now();
+                const step = (now) => {
+                    const progress = Math.min((now - startTime) / duration, 1);
+                    const ease = 1 - Math.pow(1 - progress, 3);
+                    const val = Math.floor(ease * target);
+                    el.textContent = val.toLocaleString();
+                    if (progress < 1) requestAnimationFrame(step);
+                    else el.textContent = target.toLocaleString();
+                };
+                requestAnimationFrame(step);
+                statObserver.unobserve(el);
+            }
+        });
+    }, { threshold: 0.4 });
+    statValues.forEach(v => statObserver.observe(v));
+
+    // Spotlight hover effect
+    document.querySelectorAll('.stat-card, .glass-card').forEach(card => {
+        card.addEventListener('pointermove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            card.style.setProperty('--mx', `${x}px`);
+            card.style.setProperty('--my', `${y}px`);
+        });
+    });
 });
