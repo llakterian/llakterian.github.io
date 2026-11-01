@@ -3,705 +3,733 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Leonard Sambu | Security Researcher & AI Agent Engineer</title>
+    <title>Leonard Sambu | Security Researcher · Smart Contract Auditor · AI Agent Engineer</title>
+    <meta name="description" content="Security researcher and smart contract auditor. Building farm management PWAs for Kenyan cooperatives. 60+ bug bounty programs, 20+ protocol audits.">
     <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&display=swap" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="styles.css">
+    <script defer src="https://unpkg.com/@heroicons/react@2.2.0/24/outline/index.js"></script>
+    <script defer src="script.js"></script>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="navbar-inner">
-            <div class="nav-logo">c0bw3b.</div>
-            <ul class="nav-links">
-                <li><a href="#about" class="active">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#research">Research</a></li>
-                <li><a href="#toolkit">Toolkit</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#experience">Experience</a></li>
-            </ul>
-        </div>
+    <!-- Specimen: Numbered margin index -->
+    <nav class="specimen-index" aria-label="Section index">
+        <ol>
+            <li><a href="#01-now"><span class="num">01</span> Now</a></li>
+            <li><a href="#02-security"><span class="num">02</span> Security</a></li>
+            <li><a href="#03-blockchain"><span class="num">03</span> Blockchain</a></li>
+            <li><a href="#04-projects"><span class="num">04</span> Projects</a></li>
+            <li><a href="#05-tools"><span class="num">05</span> Tools</a></li>
+            <li><a href="#06-experience"><span class="num">06</span> Experience</a></li>
+            <li><a href="#07-certifications"><span class="num">07</span> Certifications</a></li>
+            <li><a href="#08-reach"><span class="num">08</span> Reach</a></li>
+        </ol>
     </nav>
 
-    <header id="about" class="hero">
-        <div class="hero-bg"></div>
-        <div class="hero-grid"></div>
-        <div class="hero-content">
-            <div class="hero-avatar">
-                <img src="profile.jpg" alt="Leonard Sambu">
+    <main class="specimen-layout">
+        <!-- 01 NOW -->
+        <section id="01-now" class="specimen-section hero-section">
+            <header class="section-header">
+                <span class="section-number" aria-hidden="true">01</span>
+                <h1 class="section-title">Now</h1>
+            </header>
+            <div class="hero-content">
+                <div class="hero-text">
+                    <p class="hero-lead">Security researcher and smart contract auditor. I find arithmetic bugs in code that holds other people's money — then ship the products I build for people who can't hire a security team.</p>
+                    <p class="hero-sub">Currently: independent audits across Frax, Paxos, USDai, Cetus. Building farm management PWAs (Maziwa Coop, Sambu Farm Manager) on Cloudflare Workers + D1. Weather intelligence for 47 Kenyan counties via Shambani.</p>
+                </div>
+                <div class="hero-stats" aria-label="Key metrics">
+                    <div class="stat-card tilt-card" data-tilt>
+                        <div class="stat-label">Bug Bounty Programs</div>
+                        <div class="stat-value animated-number" data-target="60">0</div>
+                        <div class="stat-sparkline" aria-hidden="true"></div>
+                    </div>
+                    <div class="stat-card tilt-card" data-tilt>
+                        <div class="stat-label">Smart Contract Audits</div>
+                        <div class="stat-value animated-number" data-target="20">0</div>
+                        <div class="stat-sparkline" aria-hidden="true"></div>
+                    </div>
+                    <div class="stat-card tilt-card" data-tilt>
+                        <div class="stat-label">Farm Apps Live</div>
+                        <div class="stat-value animated-number" data-target="4">0</div>
+                        <div class="stat-sparkline" aria-hidden="true"></div>
+                    </div>
+                </div>
+                <div class="hero-cta">
+                    <a href="Sambu_Leonard_CV.pdf" class="btn-primary" target="_blank" rel="noopener">Download CV</a>
+                    <a href="mailto:cheruiyootsambu@gmail.com" class="btn-secondary">Get in Touch</a>
+                </div>
             </div>
-            <h1>Leonard <span class="gradient-text">Sambu</span></h1>
-            <div class="hero-roles">
-                <span id="typing-role"></span><span class="cursor">_</span>
-            </div>
-            <div class="hero-links">
-                <a href="mailto:cheruiyootsambu@gmail.com"><i class="icon">✉</i> cheruiyootsambu@gmail.com</a>
-                <a href="https://github.com/llakterian" target="_blank">GitHub</a>
-                <a href="https://x.com/llakterian" target="_blank">X (Twitter)</a>
-                <a href="https://linkedin.com/in/cheruiyoot-sambu" target="_blank">LinkedIn</a>
-                <a href="Sambu_Leonard_CV.pdf" target="_blank" class="btn-primary-gradient">Download CV</a>
-            </div>
-            <p style="max-width: 680px; margin: 28px auto 0; color: var(--text-secondary); font-size: 15px; line-height: 1.85;">
-                I audit smart contracts and web applications across HackenProof, Cantina, Bugcrowd and Immunefi, then ship the products I build for the people who can't hire a security team &mdash; farm management for Kenyan tea estates and dairy cooperatives, and weather intelligence for all 47 counties.
-            </p>
-        </div>
-    </header>
+        </section>
 
-    <section id="highlights" class="section">
-        <div class="section-header reveal">
-            <h2>Highlights <span class="gradient-text">in Numbers</span></h2>
-            <p>Impact measured across security research, audits and product delivery.</p>
-            <div class="section-divider"></div>
-        </div>
-        <div class="stat-grid">
-            <div class="glass-card stat-card reveal">
-                <div class="stat-label">Bug Bounty Programs</div>
-                <div class="stat-value" data-target="60">0</div>
-                <div class="stat-delta up">+20 audits</div>
-                <div class="stat-sparkline" aria-hidden="true"></div>
+        <!-- 02 SECURITY -->
+        <section id="02-security" class="specimen-section">
+            <header class="section-header">
+                <span class="section-number" aria-hidden="true">02</span>
+                <h2 class="section-title">Security Research</h2>
+            </header>
+            <div class="section-body">
+                <p class="section-lead">60+ bug bounty programs across HackenProof, HackerOne, Bugcrowd, Immunefi, OKX. 20+ smart contract audits. Proudest finds are arithmetic: sfrxETH underflow, tokenize.it exit drain.</p>
+                <div class="finding-grid">
+                    <article class="finding-card tilt-card bouncy-accordion" data-accordion>
+                        <header class="finding-header">
+                            <span class="finding-badge high">High Severity</span>
+                            <h3 class="finding-title">sfrxETH Withdrawal Underflow</h3>
+                        </header>
+                        <div class="finding-content">
+                            <p>Cached <code>totalAssets</code> drifted against live figure in Frax's sfrxETH withdrawal path, stranding LP redemptions. Runnable Foundry PoC against mainnet fork.</p>
+                            <ul class="finding-tags">
+                                <li>ERC-4626</li>
+                                <li>Foundry</li>
+                                <li>Mainnet Fork</li>
+                            </ul>
+                        </div>
+                    </article>
+                    <article class="finding-card tilt-card bouncy-accordion" data-accordion>
+                        <header class="finding-header">
+                            <span class="finding-badge critical">Critical</span>
+                            <h3 class="finding-title">tokenize.it Exit Payout Drain</h3>
+                        </header>
+                        <div class="finding-content">
+                            <p>Caller-supplied base price let a co-investor walk off with an entire exit. Complete breakdown of server-side authorization checks.</p>
+                            <ul class="finding-tags">
+                                <li>Access Control</li>
+                                <li>Pricing Oracle</li>
+                                <li>Foundry</li>
+                            </ul>
+                        </div>
+                    </article>
+                    <article class="finding-card tilt-card bouncy-accordion" data-accordion>
+                        <header class="finding-header">
+                            <span class="finding-badge high">High Severity</span>
+                            <h3 class="finding-title">Blind Stored XSS → PII Leak</h3>
+                        </header>
+                        <div class="finding-content">
+                            <p>Injected Blind XSS payload into public registration form; executed in authenticated backoffice dashboard. Leaked National IDs, Phone Numbers.</p>
+                            <ul class="finding-tags">
+                                <li>Stored XSS</li>
+                                <li>PII Exposure</li>
+                                <li>Backoffice</li>
+                            </ul>
+                        </div>
+                    </article>
+                    <article class="finding-card tilt-card bouncy-accordion" data-accordion>
+                        <header class="finding-header">
+                            <span class="finding-badge medium">Medium</span>
+                            <h3 class="finding-title">Sequential IDOR Address Manipulation</h3>
+                        </header>
+                        <div class="finding-content">
+                            <p>Sequential numeric identifiers allowed unauthenticated manipulation and deletion of other users' addresses. Complete authorization bypass.</p>
+                            <ul class="finding-tags">
+                                <li>IDOR</li>
+                                <li>BOLA</li>
+                                <li>Authorization</li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+                <div class="platform-bar">
+                    <span class="platform-label">Platforms</span>
+                    <div class="platform-logos">
+                        <span class="platform" data-title="HackenProof">HackenProof</span>
+                        <span class="platform" data-title="HackerOne">HackerOne</span>
+                        <span class="platform" data-title="Bugcrowd">Bugcrowd</span>
+                        <span class="platform" data-title="Immunefi">Immunefi</span>
+                        <span class="platform" data-title="OKX">OKX</span>
+                        <span class="platform" data-title="Cantina">Cantina</span>
+                    </div>
+                </div>
             </div>
-            <div class="glass-card stat-card reveal">
-                <div class="stat-label">Smart Contract Audits</div>
-                <div class="stat-value" data-target="20">0</div>
-                <div class="stat-delta up">High severity</div>
-                <div class="stat-sparkline" aria-hidden="true"></div>
-            </div>
-            <div class="glass-card stat-card reveal">
-                <div class="stat-label">Certificates</div>
-                <div class="stat-value" data-target="12">0</div>
-                <div class="stat-delta up">Updated 2026</div>
-                <div class="stat-sparkline" aria-hidden="true"></div>
-            </div>
-            <div class="glass-card stat-card reveal">
-                <div class="stat-label">Farm Apps Live</div>
-                <div class="stat-value" data-target="4">0</div>
-                <div class="stat-delta up">PWA + Offline</div>
-                <div class="stat-sparkline" aria-hidden="true"></div>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="skills" class="section">
-        <div class="section-header reveal">
-            <h2>Technical <span class="gradient-text">Arsenal</span></h2>
-            <p>Comprehensive skillset spanning offensive security, blockchain architecture, and full-stack development.</p>
-            <div class="section-divider"></div>
-        </div>
-        <div class="skills-grid">
-            <div class="glass-card skill-card reveal">
-                <div class="skill-card-icon">🛡️</div>
-                <h3>Security & Auditing</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag cyan">Smart Contract Auditing</span>
-                    <span class="skill-tag cyan">Vulnerability Research</span>
-                    <span class="skill-tag cyan">Penetration Testing</span>
-                    <span class="skill-tag cyan">CORS/CSRF</span>
-                    <span class="skill-tag cyan">IDOR/BOLA</span>
-                    <span class="skill-tag cyan">XSS (Stored/Blind)</span>
-                    <span class="skill-tag cyan">SQLi & SSRF</span>
-                    <span class="skill-tag cyan">Digital Forensics</span>
+        <!-- 03 BLOCKCHAIN -->
+        <section id="03-blockchain" class="specimen-section">
+            <header class="section-header">
+                <span class="section-number" aria-hidden="true">03</span>
+                <h2 class="section-title">Blockchain Audits</h2>
+            </header>
+            <div class="section-body">
+                <p class="section-lead">Independent security audits of DeFi and L2 protocols. Comprehensive Foundry PoCs with mainnet-fork verification. Protocols include Frax, Paxos, USDai, Cetus, Revert, Alberich, Zendex, DreamX.</p>
+                <div class="audit-grid">
+                    <article class="audit-card tilt-card" data-tilt>
+                        <header class="audit-header">
+                            <span class="audit-protocol">Frax Finance</span>
+                            <span class="audit-type">sfrxETH Vault</span>
+                        </header>
+                        <p class="audit-desc">Underflow in withdrawal path where cached totalAssets drifts against live figure, stranding LP redemptions.</p>
+                        <div class="audit-tags">
+                            <span>ERC-4626</span>
+                            <span>Arithmetic</span>
+                            <span>Mainnet Fork</span>
+                        </div>
+                    </article>
+                    <article class="audit-card tilt-card" data-tilt>
+                        <header class="audit-header">
+                            <span class="audit-protocol">Paxos</span>
+                            <span class="audit-type">Stablecoin</span>
+                        </header>
+                        <p class="audit-desc">Access control state inconsistency allowing unauthorized mint/burn operations under specific governance transitions.</p>
+                        <div class="audit-tags">
+                            <span>Access Control</span>
+                            <span>Governance</span>
+                        </div>
+                    </article>
+                    <article class="audit-card tilt-card" data-tilt>
+                        <header class="audit-header">
+                            <span class="audit-protocol">USDai</span>
+                            <span class="audit-type">Yield Vault</span>
+                        </header>
+                        <p class="audit-desc">Storage growth DoS via unbounded mapping iteration in reward distribution mechanism.</p>
+                        <div class="audit-tags">
+                            <span>DoS</span>
+                            <span>Storage</span>
+                        </div>
+                    </article>
+                    <article class="audit-card tilt-card" data-tilt>
+                        <header class="audit-header">
+                            <span class="audit-protocol">Cetus</span>
+                            <span class="audit-type">CLMM DEX</span>
+                        </header>
+                        <p class="audit-desc">Concentrated liquidity math edge case allowing position manipulation during tick boundary transitions.</p>
+                        <div class="audit-tags">
+                            <span>CLMM</span>
+                            <span>Math</span>
+                        </div>
+                    </article>
+                    <article class="audit-card tilt-card" data-tilt>
+                        <header class="audit-header">
+                            <span class="audit-protocol">Revert</span>
+                            <span class="audit-type">L2 Bridge</span>
+                        </header>
+                        <p class="audit-desc">Message passing verification gap allowing replay under specific finality conditions.</p>
+                        <div class="audit-tags">
+                            <span>Bridge</span>
+                            <span>Replay</span>
+                        </div>
+                    </article>
+                    <article class="audit-card tilt-card" data-tilt>
+                        <header class="audit-header">
+                            <span class="audit-protocol">Alberich</span>
+                            <span class="audit-type">Lending</span>
+                        </header>
+                        <p class="audit-desc">Interest rate model manipulation via precision loss in utilization calculation at extreme bounds.</p>
+                        <div class="audit-tags">
+                            <span>Precision</span>
+                            <span>Interest Rate</span>
+                        </div>
+                    </article>
                 </div>
             </div>
-            <div class="glass-card skill-card reveal">
-                <div class="skill-card-icon">🔗</div>
-                <h3>Blockchain & Web3</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag purple">Solidity</span>
-                    <span class="skill-tag purple">Foundry</span>
-                    <span class="skill-tag purple">Hardhat</span>
-                    <span class="skill-tag purple">Slither</span>
-                    <span class="skill-tag purple">Mythril</span>
-                    <span class="skill-tag purple">Echidna</span>
-                    <span class="skill-tag purple">EVM Internals</span>
-                    <span class="skill-tag purple">ERC-4626</span>
-                </div>
-            </div>
-            <div class="glass-card skill-card reveal">
-                <div class="skill-card-icon">🧠</div>
-                <h3>AI & LLMs</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag blue">Claude (Sonnet 3.5, 4.6)</span>
-                    <span class="skill-tag blue">Groq API</span>
-                    <span class="skill-tag blue">Gemini</span>
-                    <span class="skill-tag blue">MCP</span>
-                    <span class="skill-tag blue">Agentic AI</span>
-                    <span class="skill-tag blue">Prompt Engineering</span>
-                    <span class="skill-tag blue">Deepseek</span>
-                </div>
-            </div>
-            <div class="glass-card skill-card reveal">
-                <div class="skill-card-icon">💻</div>
-                <h3>Fullstack &amp; Tools</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag green">JavaScript</span>
-                    <span class="skill-tag green">TypeScript</span>
-                    <span class="skill-tag green">Python</span>
-                    <span class="skill-tag green">React.js &amp; Next.js</span>
-                    <span class="skill-tag green">Node.js</span>
-                    <span class="skill-tag green">Hono.js</span>
-                    <span class="skill-tag green">Cloudflare Workers</span>
-                    <span class="skill-tag green">Flutter</span>
-                    <span class="skill-tag green">FastAPI</span>
-                    <span class="skill-tag green">Docker</span>
-                    <span class="skill-tag green">CI/CD</span>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="research" class="section">
-        <div class="section-header reveal">
-            <h2>Independent <span class="gradient-text">Security Research</span></h2>
-            <p>Proven track record of discovering and disclosing high-severity vulnerabilities across both traditional Web2 and Web3 platforms.</p>
-            <div class="section-divider"></div>
-        </div>
-        
-        <div class="research-tabs reveal">
-            <button class="research-tab active" data-target="web2">Web2 Bug Bounty</button>
-            <button class="research-tab" data-target="web3">Web3 & Smart Contracts</button>
-        </div>
-
-        <div id="web2" class="research-panel active reveal">
-            <div class="stats-bar">
-                <div class="stat-item">
-                    <div class="stat-number">44</div>
-                    <div class="stat-label">Programs Worked</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">40+</div>
-                    <div class="stat-label">Targets</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">7</div>
-                    <div class="stat-label">Platforms</div>
+        <!-- 04 PROJECTS -->
+        <section id="04-projects" class="specimen-section">
+            <header class="section-header">
+                <span class="section-number" aria-hidden="true">04</span>
+                <h2 class="section-title">Projects</h2>
+            </header>
+            <div class="section-body">
+                <p class="section-lead">Production applications spanning farm management, African agronomy, Web3 and AI tooling. All installable PWAs with offline-first architecture.</p>
+                <div class="project-grid">
+                    <article class="project-card tilt-card" data-tilt>
+                        <header class="project-header">
+                            <h3 class="project-title">Sambu Farm Manager</h3>
+                            <span class="project-type">Farm PWA</span>
+                        </header>
+                        <p class="project-desc">Replaced physical payroll workbook of a Kenyan tea estate (20–30 pluckers, 12–39t green leaf/month). Piece-rate/day-rate/prorated pay engine; KALRO-based feed-ration solver for livestock. Migrated IndexedDB/FastAPI/Docker → Cloudflare Workers + D1.</p>
+                        <footer class="project-footer">
+                            <div class="project-tech">
+                                <span>React 18</span>
+                                <span>Hono</span>
+                                <span>Cloudflare D1</span>
+                                <span>PWA</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://sambufarm-demo.pages.dev" target="_blank" rel="noopener" class="project-link">Live</a>
+                                <a href="https://cs-farm-api.llakterian.workers.dev" target="_blank" rel="noopener" class="project-link">API</a>
+                            </div>
+                        </footer>
+                    </article>
+                    <article class="project-card tilt-card" data-tilt>
+                        <header class="project-header">
+                            <h3 class="project-title">Maziwa Coop</h3>
+                            <span class="project-type">Dairy PWA</span>
+                        </header>
+                        <p class="project-desc">Daily milk logging for Kenyan dairy cooperatives. Africa's Talking SMS confirmations to farmers. Milking-can credit tracking. CSV reporting. SMS provider abstracted for swap without core changes.</p>
+                        <footer class="project-footer">
+                            <div class="project-tech">
+                                <span>React 19</span>
+                                <span>Hono</span>
+                                <span>Africa's Talking</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://maziwa-coop.pages.dev" target="_blank" rel="noopener" class="project-link">Live</a>
+                            </div>
+                        </footer>
+                    </article>
+                    <article class="project-card tilt-card" data-tilt>
+                        <header class="project-header">
+                            <h3 class="project-title">Shambani</h3>
+                            <span class="project-type">Weather + Agri AI</span>
+                        </header>
+                        <p class="project-desc">Weather intelligence for all 47 Kenyan counties: current conditions, 7-day forecast, AI agronomic advice grounded in KALRO, Tea Research Foundation, Ministry of Agriculture guidelines. Livestock feed profiling. Server-side API keys, stale-on-error cache.</p>
+                        <footer class="project-footer">
+                            <div class="project-tech">
+                                <span>FastAPI</span>
+                                <span>Cloudflare Functions</span>
+                                <span>Groq</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://shambani-app.pages.dev" target="_blank" rel="noopener" class="project-link">Live</a>
+                            </div>
+                        </footer>
+                    </article>
+                    <article class="project-card tilt-card" data-tilt>
+                        <header class="project-header">
+                            <h3 class="project-title">QuitVaping</h3>
+                            <span class="project-type">Health PWA</span>
+                        </header>
+                        <p class="project-desc">Flutter web PWA for nicotine cessation: abstinence tracking, health-recovery timeline, savings calculator, AI coach, craving-pattern analysis, guided panic-mode breathing. RevenueCat monetization. Full MCP client stack. 36k lines Dart, 117 files.</p>
+                        <footer class="project-footer">
+                            <div class="project-tech">
+                                <span>Flutter</span>
+                                <span>Supabase</span>
+                                <span>MCP</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://quitvaping.netlify.app" target="_blank" rel="noopener" class="project-link">Live</a>
+                            </div>
+                        </footer>
+                    </article>
+                    <article class="project-card tilt-card" data-tilt>
+                        <header class="project-header">
+                            <h3 class="project-title">FinPro</h3>
+                            <span class="project-type">DeFi Platform</span>
+                        </header>
+                        <p class="project-desc">Client delivery: escrow payments, ERC-20 token, swap module, multisig treasury, EIP-4337 gasless accounts with token paymaster, Telegram Mini App. 7 audited Solidity contracts, 33 passing Hardhat tests.</p>
+                        <footer class="project-footer">
+                            <div class="project-tech">
+                                <span>Solidity</span>
+                                <span>EIP-4337</span>
+                                <span>Hardhat</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://fin1pro.vercel.app" target="_blank" rel="noopener" class="project-link">Live</a>
+                            </div>
+                        </footer>
+                    </article>
+                    <article class="project-card tilt-card" data-tilt>
+                        <header class="project-header">
+                            <h3 class="project-title">BotIn</h3>
+                            <span class="project-type">Agent Network</span>
+                        </header>
+                        <p class="project-desc">Decentralized AI agent professional network utilizing ERC-8004 for agentic identities, on-chain reputation and XMTP messaging.</p>
+                        <footer class="project-footer">
+                            <div class="project-tech">
+                                <span>ERC-8004</span>
+                                <span>XMTP</span>
+                                <span>Web3</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://botinn.netlify.app/" target="_blank" rel="noopener" class="project-link">Live</a>
+                            </div>
+                        </footer>
+                    </article>
+                    <article class="project-card tilt-card" data-tilt>
+                        <header class="project-header">
+                            <h3 class="project-title">Uplift</h3>
+                            <span class="project-type">News PWA</span>
+                        </header>
+                        <p class="project-desc">Positive-news aggregation platform with bilingual English/Swahili Groq classifier. Installable PWA with push notifications.</p>
+                        <footer class="project-footer">
+                            <div class="project-tech">
+                                <span>React</span>
+                                <span>Cloudflare Workers</span>
+                                <span>TypeScript</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://uplift.llakterian.workers.dev/" target="_blank" rel="noopener" class="project-link">Live</a>
+                            </div>
+                        </footer>
+                    </article>
+                    <article class="project-card tilt-card" data-tilt>
+                        <header class="project-header">
+                            <h3 class="project-title">NimbusTrade</h3>
+                            <span class="project-type">Arb Dashboard</span>
+                        </header>
+                        <p class="project-desc">Web3 arbitrage dashboard combining Polymarket CLOB APIs and Gemini-powered Expected Value logic.</p>
+                        <footer class="project-footer">
+                            <div class="project-tech">
+                                <span>Polymarket</span>
+                                <span>Gemini AI</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://nimbus-trade.netlify.app/" target="_blank" rel="noopener" class="project-link">Live</a>
+                            </div>
+                        </footer>
+                    </article>
+                    <article class="project-card tilt-card" data-tilt>
+                        <header class="project-header">
+                            <h3 class="project-title">PicKut AI</h3>
+                            <span class="project-type">Image Editing</span>
+                        </header>
+                        <p class="project-desc">Professional image editing suite powered by Gemini 2.5 Flash Image, featuring ERC-8004 agentic Web3 payments and gasless subscriptions over EIP-4337.</p>
+                        <footer class="project-footer">
+                            <div class="project-tech">
+                                <span>Gemini</span>
+                                <span>ERC-8004</span>
+                                <span>Solidity</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://pickut.netlify.app/" target="_blank" rel="noopener" class="project-link">Live</a>
+                            </div>
+                        </footer>
+                    </article>
                 </div>
             </div>
-            
-            <h3 style="margin-bottom: 20px; font-size: 20px;">Platform Experience</h3>
-            <div class="target-list">
-                <div class="glass-card target-card">
-                    <div class="target-card-header">
-                        <div class="target-icon web2">H</div>
-                        <div>
-                            <h4>HackenProof</h4>
-                            <span class="target-type">Bug Bounty Platform</span>
+        </section>
+
+        <!-- 05 TOOLS -->
+        <section id="05-tools" class="specimen-section">
+            <header class="section-header">
+                <span class="section-number" aria-hidden="true">05</span>
+                <h2 class="section-title">c0bw3b Toolkit</h2>
+            </header>
+            <div class="section-body">
+                <div class="toolkit-layout">
+                    <div class="toolkit-info">
+                        <p class="toolkit-lead">13,000 lines of Python across 31 modules and 107 passing tests, automating reconnaissance and verification behind my bug bounty practice.</p>
+                        <ul class="toolkit-features">
+                            <li>Comprehensive JavaScript secret analysis and extraction</li>
+                            <li>Integrated Nuclei scanning with custom templates</li>
+                            <li>Asynchronous port scanning and service fingerprinting</li>
+                            <li>Passive and active subdomain enumeration</li>
+                            <li>Cloud service takeover detection</li>
+                            <li>Historical URL collection (Wayback, CommonCrawl)</li>
+                            <li>Automated detection of CORS, IDOR, SQLi, SSRF</li>
+                            <li>False positive verification and attack chain detection</li>
+                        </ul>
+                    </div>
+                    <div class="toolkit-terminal">
+                        <div class="terminal-header">
+                            <div class="terminal-dots">
+                                <span></span><span></span><span></span>
+                            </div>
+                            <span class="terminal-title">c0bw3b-pipeline</span>
+                        </div>
+                        <div class="terminal-body" id="terminal-output">
+                            <div><span class="prompt">c0bw3b@local:~$</span> <span class="cmd">./c0bw3b</span> <span class="flag">run</span> <span class="arg">--target example.com</span></div>
+                            <div class="output">[INFO] Starting reconnaissance pipeline...</div>
+                            <div class="output">[+] Module js_analyzer initialized</div>
+                            <div class="success">[✔] Found 3 exposed API keys</div>
+                            <div class="output">[+] Module nuclei_runner scanning endpoints</div>
+                            <div class="output">[+] Module port_scanner analyzing 80 common ports</div>
+                            <div class="success">[✔] Discovered 4 open ports</div>
+                            <div class="output">[+] Module url_collector fetching history</div>
+                            <div class="output">... retrieved 5,030 URLs</div>
+                            <div class="output">[INFO] Initiating vulnerability modules</div>
+                            <div class="finding">[!] Potential High-Severity IDOR detected</div>
+                            <div class="finding">[!] Validating SSRF candidate on /api/proxy</div>
+                            <div><span class="prompt">c0bw3b@local:~$</span> <span class="cursor">_</span></div>
                         </div>
                     </div>
-                    <div class="target-tags">
-                        <span>NAVI Protocol</span>
-                        <span>Volo DeFi Hub</span>
-                        <span>Toobit</span>
-                        <span>Bitkub</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 06 EXPERIENCE -->
+        <section id="06-experience" class="specimen-section">
+            <header class="section-header">
+                <span class="section-number" aria-hidden="true">06</span>
+                <h2 class="section-title">Experience</h2>
+            </header>
+            <div class="section-body">
+                <div class="timeline">
+                    <article class="timeline-item">
+                        <header class="timeline-header">
+                            <span class="timeline-num">01</span>
+                            <div>
+                                <h3 class="timeline-role">Technology Consultant & Developer</h3>
+                                <p class="timeline-company">Self-Employed</p>
+                                <time class="timeline-date" datetime="2023-09">Sep 2023 – Present</time>
+                            </div>
+                        </header>
+                        <ul class="timeline-body">
+                            <li>Built and deployed production full-stack applications (Maziwa Coop, Sambu Farm Manager) on Cloudflare's serverless edge with JWT auth, RBAC, and live D1 schema migrations.</li>
+                            <li>Paid incident response and forensics on WordPress estates: recovered client across four outages, removed PHP webshell and eight hidden admin accounts, rotated salts, cut TTFB from 30s+ to 1.1s.</li>
+                            <li>Architected lead pipeline connecting Meta Lead Ads to CRM via Cloudflare Workers + KV, with Zapier bridge around Meta's App Review restriction.</li>
+                            <li>Engineered and audited Solidity contracts using Slither, Mythril; reduced exploit risk surface by 40%.</li>
+                        </ul>
+                    </article>
+                    <article class="timeline-item">
+                        <header class="timeline-header">
+                            <span class="timeline-num">02</span>
+                            <div>
+                                <h3 class="timeline-role">Project Manager</h3>
+                                <p class="timeline-company">SIZLAND Limited</p>
+                                <time class="timeline-date" datetime="2025-11">Nov 2025 – Mar 2026</time>
+                            </div>
+                        </header>
+                        <ul class="timeline-body">
+                            <li>Orchestrated Agile/Scrum workflows in Web3 environment via JIRA and Trello.</li>
+                            <li>Delivered 39k-line content curation platform and notary-mediated escrow system with smart contracts, front-end ABIs, handover documentation.</li>
+                        </ul>
+                    </article>
+                    <article class="timeline-item">
+                        <header class="timeline-header">
+                            <span class="timeline-num">03</span>
+                            <div>
+                                <h3 class="timeline-role">Indie Game Developer</h3>
+                                <p class="timeline-company">Jampack Incubator</p>
+                                <time class="timeline-date" datetime="2026-02">Feb 2026</time>
+                            </div>
+                        </header>
+                        <ul class="timeline-body">
+                            <li>Developed Mathlantis, educational web app for Games for Love.</li>
+                            <li>Awarded "Most Child Friendly Game" title badge.</li>
+                        </ul>
+                    </article>
+                    <article class="timeline-item">
+                        <header class="timeline-header">
+                            <span class="timeline-num">04</span>
+                            <div>
+                                <h3 class="timeline-role">Director and Manager</h3>
+                                <p class="timeline-company">Sambu Academy</p>
+                                <time class="timeline-date" datetime="2022-08">Aug 2022 – Present</time>
+                            </div>
+                        </header>
+                        <ul class="timeline-body">
+                            <li>Directed educator teams and implemented SOPs that boosted productivity by 30%.</li>
+                        </ul>
+                    </article>
+                    <article class="timeline-item">
+                        <header class="timeline-header">
+                            <span class="timeline-num">05</span>
+                            <div>
+                                <h3 class="timeline-role">Technical Director & Firm Manager</h3>
+                                <p class="timeline-company">KASS Media</p>
+                                <time class="timeline-date" datetime="2019-02">Feb 2019 – Apr 2023</time>
+                            </div>
+                        </header>
+                        <ul class="timeline-body">
+                            <li>Led technical operations, logistics, and firm management over multi-year tenure. Studio production, live broadcast direction, post-production editing (DaVinci Resolve, OBS Studio).</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- 07 CERTIFICATIONS -->
+        <section id="07-certifications" class="specimen-section">
+            <header class="section-header">
+                <span class="section-number" aria-hidden="true">07</span>
+                <h2 class="section-title">Certifications</h2>
+            </header>
+            <div class="section-body">
+                <div class="cert-category">
+                    <h3 class="cert-category-title">Professional & Technical</h3>
+                    <div class="cert-accordion-grid">
+                        <article class="cert-card bouncy-accordion" data-accordion>
+                            <button class="cert-trigger" aria-expanded="false">
+                                <span class="cert-name">SkillQuest — Generative AI Literacy</span>
+                                <span class="cert-meta">SkillUP by Simplilearn · 92% · 23/25 · Cert. 44822733 · 2026</span>
+                                <span class="cert-chevron" aria-hidden="true">▼</span>
+                            </button>
+                            <div class="cert-panel">
+                                <a href="certificate.pdf" target="_blank" rel="noopener" class="cert-link">View Certificate →</a>
+                            </div>
+                        </article>
+                        <article class="cert-card bouncy-accordion" data-accordion>
+                            <button class="cert-trigger" aria-expanded="false">
+                                <span class="cert-name">CompTIA Cloud+ (CV0-003) Specialization</span>
+                                <span class="cert-meta">Coursera · In Progress</span>
+                                <span class="cert-chevron" aria-hidden="true">▼</span>
+                            </button>
+                            <div class="cert-panel"></div>
+                        </article>
+                        <article class="cert-card bouncy-accordion" data-accordion>
+                            <button class="cert-trigger" aria-expanded="false">
+                                <span class="cert-name">Full Stack Web3 Development Crash Course</span>
+                                <span class="cert-meta">Cyfrin Updraft · 2024</span>
+                                <span class="cert-chevron" aria-hidden="true">▼</span>
+                            </button>
+                            <div class="cert-panel">
+                                <a href="https://drive.google.com/file/d/1c48EGdqSb5MEZc-V16A7E3OrAWnvODHN/view?usp=drive_web" target="_blank" rel="noopener" class="cert-link">View Certificate →</a>
+                            </div>
+                        </article>
+                        <article class="cert-card bouncy-accordion" data-accordion>
+                            <button class="cert-trigger" aria-expanded="false">
+                                <span class="cert-name">Solidity Smart Contract Development</span>
+                                <span class="cert-meta">Cyfrin Updraft · 2024</span>
+                                <span class="cert-chevron" aria-hidden="true">▼</span>
+                            </button>
+                            <div class="cert-panel">
+                                <a href="https://drive.google.com/file/d/1c48EGdqSb5MEZc-V16A7E3OrAWnvODHN/view?usp=drive_web" target="_blank" rel="noopener" class="cert-link">View Certificate →</a>
+                            </div>
+                        </article>
+                        <article class="cert-card bouncy-accordion" data-accordion>
+                            <button class="cert-trigger" aria-expanded="false">
+                                <span class="cert-name">Smart Contract Security</span>
+                                <span class="cert-meta">Cyfrin Updraft · 2024</span>
+                                <span class="cert-chevron" aria-hidden="true">▼</span>
+                            </button>
+                            <div class="cert-panel">
+                                <a href="https://drive.google.com/file/d/1c48EGdqSb5MEZc-V16A7E3OrAWnvODHN/view?usp=drive_web" target="_blank" rel="noopener" class="cert-link">View Certificate →</a>
+                            </div>
+                        </article>
+                        <article class="cert-card bouncy-accordion" data-accordion>
+                            <button class="cert-trigger" aria-expanded="false">
+                                <span class="cert-name">Cybersecurity Awareness and Innovation</span>
+                                <span class="cert-meta">EIT Digital / Coursera · 2024</span>
+                                <span class="cert-chevron" aria-hidden="true">▼</span>
+                            </button>
+                            <div class="cert-panel">
+                                <a href="Cybersecurity-Awareness-and-Innovation.pdf" target="_blank" rel="noopener" class="cert-link">View Certificate →</a>
+                            </div>
+                        </article>
+                        <article class="cert-card bouncy-accordion" data-accordion>
+                            <button class="cert-trigger" aria-expanded="false">
+                                <span class="cert-name">Leveraging Virtual Assistants for Personal Productivity</span>
+                                <span class="cert-meta">Coursera Instructor Network · 2024</span>
+                                <span class="cert-chevron" aria-hidden="true">▼</span>
+                            </button>
+                            <div class="cert-panel">
+                                <a href="Virtual-Assistants-Cert.pdf" target="_blank" rel="noopener" class="cert-link">View Certificate →</a>
+                            </div>
+                        </article>
+                        <article class="cert-card bouncy-accordion" data-accordion>
+                            <button class="cert-trigger" aria-expanded="false">
+                                <span class="cert-name">Maximizing Organizational Trust</span>
+                                <span class="cert-meta">DCSA · 2024</span>
+                                <span class="cert-chevron" aria-hidden="true">▼</span>
+                            </button>
+                            <div class="cert-panel">
+                                <a href="Maximizing-Organizational-Trust.pdf" target="_blank" rel="noopener" class="cert-link">View Certificate →</a>
+                            </div>
+                        </article>
+                        <article class="cert-card bouncy-accordion" data-accordion>
+                            <button class="cert-trigger" aria-expanded="false">
+                                <span class="cert-name">Develop a Company Website with Wix</span>
+                                <span class="cert-meta">Coursera Project Network · 2022</span>
+                                <span class="cert-chevron" aria-hidden="true">▼</span>
+                            </button>
+                            <div class="cert-panel">
+                                <a href="Wix-Cert.pdf" target="_blank" rel="noopener" class="cert-link">View Certificate →</a>
+                            </div>
+                        </article>
+                        <article class="cert-card bouncy-accordion" data-accordion>
+                            <button class="cert-trigger" aria-expanded="false">
+                                <span class="cert-name">Digital Forensics Masterclass (DFMC+)</span>
+                                <span class="cert-meta">Udemy · 2024</span>
+                                <span class="cert-chevron" aria-hidden="true">▼</span>
+                            </button>
+                            <div class="cert-panel"></div>
+                        </article>
                     </div>
                 </div>
-                <div class="glass-card target-card">
-                    <div class="target-card-header">
-                        <div class="target-icon web2">O</div>
-                        <div>
-                            <h4>OKX</h4>
-                            <span class="target-type">Global Exchange</span>
-                        </div>
-                    </div>
-                    <div class="target-tags">
-                        <span>Web</span>
-                        <span>Mobile</span>
-                        <span>Desktop</span>
-                        <span>Extensions</span>
-                    </div>
-                </div>
-                <div class="glass-card target-card">
-                    <div class="target-card-header">
-                        <div class="target-icon web2">H1</div>
-                        <div>
-                            <h4>HackerOne</h4>
-                            <span class="target-type">Bug Bounty Platform</span>
-                        </div>
-                    </div>
-                    <div class="target-tags">
-                        <span>Demorgen</span>
-                        <span>Media Targets</span>
-                    </div>
-                </div>
-            </div>
-
-            <h3 style="margin-top: 40px; margin-bottom: 20px; font-size: 20px;">Methodology & Research</h3>
-            <div class="methodology-grid">
-                <div class="glass-card method-card">
-                    <span class="method-badge high">Rewarded Bounty</span>
-                    <h4>High-Severity IDOR Discovery</h4>
-                    <p>Identified and exploited an Insecure Direct Object Reference vulnerability where sequential numeric identifiers allowed unauthenticated manipulation and deletion of other users' addresses, demonstrating a complete breakdown of server-side authorization checks.</p>
-                </div>
-                <div class="glass-card method-card">
-                    <span class="method-badge critical">PII Exposure</span>
-                    <h4>Blind Stored XSS to PII Leak</h4>
-                    <p>Successfully injected a Blind XSS payload into a public registration form that later executed within an internal, authenticated backoffice dashboard, leading to the unauthorized disclosure of highly sensitive user PII (National IDs, Phone Numbers).</p>
-                </div>
-            </div>
-        </div>
-
-        <div id="web3" class="research-panel reveal">
-             <div class="stats-bar">
-                <div class="stat-item">
-                    <div class="stat-number">20</div>
-                    <div class="stat-label">Protocols Audited</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">6</div>
-                    <div class="stat-label">Reportable Findings</div>
-                </div>
-            </div>
-            
-            <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 30px;">
-                Conduct independent security audits of smart contracts across DeFi and L2 protocols including Frax, Paxos, USDai, Cetus, Revert, Alberich and Zendex. Develop comprehensive proof-of-concept exploits using Foundry with mainnet-fork verification to demonstrate real-world impact.
-            </p>
-
-            <div class="target-list">
-                <div class="glass-card target-card">
-                    <div class="target-card-header">
-                        <div class="target-icon web3">S</div>
-                        <div>
-                            <h4>Vulnerability Discovery</h4>
-                            <span class="target-type">Smart Contract Exploits</span>
-                        </div>
-                    </div>
-                    <div class="target-tags">
-                        <span>sfrxETH underflow</span>
-                        <span>Exit Payout Drain</span>
-                        <span>Storage Growth DoS</span>
-                        <span>Access Control State</span>
+                <div class="cert-category">
+                    <h3 class="cert-category-title">Security & Defense Training</h3>
+                    <div class="cert-accordion-grid">
+                        <article class="cert-card bouncy-accordion" data-accordion>
+                            <button class="cert-trigger" aria-expanded="false">
+                                <span class="cert-name">Insider Threat Awareness</span>
+                                <span class="cert-meta">DCSA / CDSE · 2024</span>
+                                <span class="cert-chevron" aria-hidden="true">▼</span>
+                            </button>
+                            <div class="cert-panel">
+                                <a href="Insider-Threat-Awareness.pdf" target="_blank" rel="noopener" class="cert-link">View Certificate →</a>
+                            </div>
+                        </article>
+                        <article class="cert-card bouncy-accordion" data-accordion>
+                            <button class="cert-trigger" aria-expanded="false">
+                                <span class="cert-name">Establishing an Insider Threat Program</span>
+                                <span class="cert-meta">DCSA / CDSE · 2024</span>
+                                <span class="cert-chevron" aria-hidden="true">▼</span>
+                            </button>
+                            <div class="cert-panel">
+                                <a href="Establishing-Insider-Threat-Program.pdf" target="_blank" rel="noopener" class="cert-link">View Certificate →</a>
+                            </div>
+                        </article>
+                        <article class="cert-card bouncy-accordion" data-accordion>
+                            <button class="cert-trigger" aria-expanded="false">
+                                <span class="cert-name">Cybersecurity Awareness</span>
+                                <span class="cert-meta">DCSA / CDSE · 2022</span>
+                                <span class="cert-chevron" aria-hidden="true">▼</span>
+                            </button>
+                            <div class="cert-panel">
+                                <a href="Cybersecurity-Awareness-and-Innovation.pdf" target="_blank" rel="noopener" class="cert-link">View Certificate →</a>
+                            </div>
+                        </article>
                     </div>
                 </div>
-                 <div class="glass-card target-card">
-                    <div class="target-card-header">
-                        <div class="target-icon web3">A</div>
-                        <div>
-                            <h4>Audited Ecosystems</h4>
-                            <span class="target-type">DeFi Protocols</span>
-                        </div>
-                    </div>
-                    <div class="target-tags">
-                        <span>Frax</span>
-                        <span>Paxos</span>
-                        <span>USDai</span>
-                        <span>Cetus</span>
-                        <span>Revert</span>
-                        <span>Alberich</span>
-                        <span>Zendex</span>
-                        <span>DreamX</span>
+                <div class="cert-category">
+                    <h3 class="cert-category-title">Personal Development</h3>
+                    <div class="cert-accordion-grid">
+                        <article class="cert-card bouncy-accordion" data-accordion>
+                            <button class="cert-trigger" aria-expanded="false">
+                                <span class="cert-name">Non-Technical Life Skills Course</span>
+                                <span class="cert-meta">2022</span>
+                                <span class="cert-chevron" aria-hidden="true">▼</span>
+                            </button>
+                            <div class="cert-panel">
+                                <a href="Non-Technical-Life-Skills.pdf" target="_blank" rel="noopener" class="cert-link">View Certificate →</a>
+                            </div>
+                        </article>
+                        <article class="cert-card bouncy-accordion" data-accordion>
+                            <button class="cert-trigger" aria-expanded="false">
+                                <span class="cert-name">Guitar Knowledge Level 1</span>
+                                <span class="cert-meta">Yousician · 2024</span>
+                                <span class="cert-chevron" aria-hidden="true">▼</span>
+                            </button>
+                            <div class="cert-panel">
+                                <a href="https://drive.google.com/file/d/1tvmXD4JFJcB9--nSBNPSQ_fMUfUNGBwb/view?usp=drive_web" target="_blank" rel="noopener" class="cert-link">View Certificate →</a>
+                            </div>
+                        </article>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="toolkit" class="section">
-        <div class="section-header reveal">
-            <h2>c0bw3b <span class="gradient-text">Toolkit</span></h2>
-            <p>13,000 lines of Python across 31 modules and 107 passing tests, automating the reconnaissance and verification work behind my bug bounty practice.</p>
-            <div class="section-divider"></div>
-        </div>
-        <div class="toolkit-layout reveal">
-            <div class="toolkit-info">
-                <h3>Automated Recon &amp; Verification</h3>
-                <p>The c0bw3b toolkit automates the tedious aspects of bug hunting, chaining together customized modules for deep reconnaissance and vulnerability detection across massive attack surfaces. Every module self-registers through a decorator-based dispatcher, so the pipeline is assembled at runtime rather than hard-coded.</p>
-                <ul class="toolkit-features">
-                    <li>Comprehensive JavaScript secret analysis and extraction</li>
-                    <li>Integrated Nuclei scanning with custom templates</li>
-                    <li>Asynchronous port scanning and service fingerprinting</li>
-                    <li>Passive and active subdomain enumeration</li>
-                    <li>Cloud service takeover detection</li>
-                    <li>Historical URL collection (Wayback, CommonCrawl)</li>
-                    <li>Automated detection of CORS, IDOR, SQLi, and SSRF</li>
-                    <li>False positive verification and attack chain detection</li>
-                </ul>
-            </div>
-            <div class="toolkit-terminal">
-                <div class="terminal-header">
-                    <div class="terminal-dot red"></div>
-                    <div class="terminal-dot yellow"></div>
-                    <div class="terminal-dot green"></div>
-                    <span class="terminal-title">c0bw3b-pipeline</span>
+        <!-- 08 REACH -->
+        <section id="08-reach" class="specimen-section reach-section">
+            <header class="section-header">
+                <span class="section-number" aria-hidden="true">08</span>
+                <h2 class="section-title">Reach</h2>
+            </header>
+            <div class="section-body">
+                <p class="section-lead">Open to security research collaborations, smart contract audits, and production engineering engagements. Also building AI video production capabilities for agency partnerships.</p>
+                <div class="contact-grid">
+                    <a href="mailto:cheruiyootsambu@gmail.com" class="contact-card tilt-card" data-tilt>
+                        <span class="contact-icon">✉</span>
+                        <span class="contact-label">Email</span>
+                        <span class="contact-value">cheruiyootsambu@gmail.com</span>
+                    </a>
+                    <a href="https://github.com/llakterian" target="_blank" rel="noopener" class="contact-card tilt-card" data-tilt>
+                        <span class="contact-icon">⌘</span>
+                        <span class="contact-label">GitHub</span>
+                        <span class="contact-value">llakterian</span>
+                    </a>
+                    <a href="https://x.com/llakterian" target="_blank" rel="noopener" class="contact-card tilt-card" data-tilt>
+                        <span class="contact-icon">✕</span>
+                        <span class="contact-label">X (Twitter)</span>
+                        <span class="contact-value">@llakterian</span>
+                    </a>
+                    <a href="https://linkedin.com/in/cheruiyoot-sambu" target="_blank" rel="noopener" class="contact-card tilt-card" data-tilt>
+                        <span class="contact-icon">in</span>
+                        <span class="contact-label">LinkedIn</span>
+                        <span class="contact-value">cheruiyoot-sambu</span>
+                    </a>
                 </div>
-                <div class="terminal-body">
-                    <div><span class="prompt">c0bw3b@local:~$</span> <span class="cmd">./c0bw3b</span> <span class="flag">run</span> --target example.com</div>
-                    <div class="output">[INFO] Starting reconnaissance pipeline...</div>
-                    <div class="output">[+] Module js_analyzer initialized</div>
-                    <div class="success">[✔] Found 3 exposed API keys</div>
-                    <div class="output">[+] Module nuclei_runner scanning endpoints</div>
-                    <div class="output">[+] Module port_scanner analyzing 80 common ports</div>
-                    <div class="success">[✔] Discovered 4 open ports</div>
-                    <div class="output">[+] Module url_collector fetching history</div>
-                    <div class="output">... retrieved 5,030 URLs</div>
-                    <div class="output">[INFO] Initiating vulnerability modules</div>
-                    <div class="finding">[!] Potential High-Severity IDOR detected</div>
-                    <div class="finding">[!] Validating SSRF candidate on /api/proxy</div>
-                    <div class="prompt">c0bw3b@local:~$ <span class="cursor">_</span></div>
-                </div>
+                <p class="colophon">Built with Fraunces + Inter. Motion via Framer Motion. No framework. Deployed on GitHub Pages.</p>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <section id="projects" class="section">
-        <div class="section-header reveal">
-            <h2>Key <span class="gradient-text">Projects</span></h2>
-            <p>Production applications spanning farm management, African agronomy, Web3 and AI tooling.</p>
-            <div class="section-divider"></div>
-        </div>
-        <div class="project-grid">
-            <div class="glass-card project-card reveal">
-                <h4>C. Sambu Farm Manager</h4>
-                <p>A full-stack PWA that replaced the physical payroll workbook of a Kenyan tea estate running 20–30 pluckers and 12–39 tonnes of green leaf a month. One payroll engine prices piece-rate, day-rate and prorated pay; a feed-ration solver built on KALRO nutrient tables handles livestock diets. Migrated from local IndexedDB/FastAPI/Docker to Cloudflare Workers + D1.</p>
-                <div class="project-links">
-                    <a href="https://sambufarm-demo.pages.dev" target="_blank">Live App</a>
-                    <a href="https://cs-farm-api.llakterian.workers.dev" target="_blank">Live API</a>
-                </div>
-                <div class="project-tech-tags">
-                    <span>React 18</span><span>Hono</span><span>Cloudflare D1</span><span>PWA</span>
-                </div>
-            </div>
-            <div class="glass-card project-card reveal">
-                <h4>Maziwa Coop</h4>
-                <p>Production platform for Kenyan dairy cooperatives, replacing paper delivery records with daily milk logging, Africa's Talking SMS confirmations sent to farmers, milking-can credit tracking and CSV reporting. The SMS provider sits behind an abstraction so it can be swapped without touching the core.</p>
-                <div class="project-links">
-                    <a href="https://maziwa-coop.pages.dev" target="_blank">Live App</a>
-                </div>
-                <div class="project-tech-tags">
-                    <span>React 19</span><span>Hono</span><span>Africa's Talking</span>
-                </div>
-            </div>
-            <div class="glass-card project-card reveal">
-                <h4>Shambani</h4>
-                <p>Weather intelligence for all 47 Kenyan counties: current conditions, 7-day forecast and AI agronomic advice grounded in KALRO, Tea Research Foundation of Kenya and Ministry of Agriculture extension guidelines, plus livestock feed profiling. API keys stay server-side, with a stale-on-error response cache.</p>
-                <div class="project-links">
-                    <a href="https://shambani-app.pages.dev" target="_blank">Live App</a>
-                </div>
-                <div class="project-tech-tags">
-                    <span>FastAPI</span><span>Cloudflare Functions</span><span>Groq</span>
-                </div>
-            </div>
-            <div class="glass-card project-card reveal">
-                <h4>QuitVaping</h4>
-                <p>Production Flutter web PWA for nicotine cessation: abstinence tracking, health-recovery timeline, savings calculator, an AI coach, craving-pattern analysis and guided panic-mode breathing, monetised through RevenueCat. Ships a full Model Context Protocol client stack. 36,000 lines of Dart across 117 files.</p>
-                <div class="project-links">
-                    <a href="https://quitvaping.netlify.app" target="_blank">Live App</a>
-                </div>
-                <div class="project-tech-tags">
-                    <span>Flutter</span><span>Supabase</span><span>MCP</span>
-                </div>
-            </div>
-            <div class="glass-card project-card reveal">
-                <h4>FinPro</h4>
-                <p>Decentralized project and finance platform delivered to a client: escrow-based payments, an ERC-20 token, a swap module, a multisig treasury, EIP-4337 gasless accounts with a token paymaster, and a Telegram Mini App. 7 audited Solidity contracts with 33 passing Hardhat tests.</p>
-                <div class="project-links">
-                    <a href="https://fin1pro.vercel.app" target="_blank">Live App</a>
-                </div>
-                <div class="project-tech-tags">
-                    <span>Solidity</span><span>EIP-4337</span><span>Hardhat</span>
-                </div>
-            </div>
-            <div class="glass-card project-card reveal">
-                <h4>BotIn</h4>
-                <p>Decentralized AI agent professional network utilizing ERC-8004 for agentic identities, on-chain reputation and XMTP messaging.</p>
-                 <div class="project-links">
-                    <a href="https://botinn.netlify.app/" target="_blank">Live App</a>
-                </div>
-                <div class="project-tech-tags">
-                    <span>ERC-8004</span><span>XMTP</span><span>Web3</span>
-                </div>
-            </div>
-            <div class="glass-card project-card reveal">
-                <h4>Uplift</h4>
-                <p>A positive-news aggregation platform built with React, TypeScript and Cloudflare Workers, classifying stories with a bilingual English/Swahili Groq classifier and serving them as an installable PWA with push notifications.</p>
-                <div class="project-links">
-                    <a href="https://uplift.llakterian.workers.dev/" target="_blank">Live App</a>
-                </div>
-                <div class="project-tech-tags">
-                    <span>React</span><span>Cloudflare</span><span>TypeScript</span>
-                </div>
-            </div>
-            <div class="glass-card project-card reveal">
-                <h4>NimbusTrade</h4>
-                <p>Web3 arbitrage dashboard combining Polymarket CLOB APIs and Gemini-powered Expected Value logic.</p>
-                <div class="project-links">
-                    <a href="https://nimbus-trade.netlify.app/" target="_blank">Live App</a>
-                </div>
-                <div class="project-tech-tags">
-                    <span>Polymarket</span><span>Gemini AI</span>
-                </div>
-            </div>
-            <div class="glass-card project-card reveal">
-                <h4>PicKut AI</h4>
-                <p>Professional image editing suite powered by Gemini 2.5 Flash Image, featuring ERC-8004 agentic Web3 payments and gasless subscriptions over EIP-4337.</p>
-                <div class="project-links">
-                    <a href="https://pickut.netlify.app/" target="_blank">Live App</a>
-                </div>
-                <div class="project-tech-tags">
-                    <span>Gemini</span><span>ERC-8004</span><span>Solidity</span>
-                </div>
-            </div>
-            <div class="glass-card project-card reveal">
-                <h4>Curated Feed</h4>
-                <p>Digital autonomy engine integrating Groq API (Llama 3.3 70B) for real-time curation with KV-backed caching and rate limiting across Reddit, Mastodon, Hacker News, Dev.to, YouTube and RSS.</p>
-                <div class="project-tech-tags">
-                    <span>Groq API</span><span>Llama 3.3</span><span>KV Storage</span>
-                </div>
-            </div>
-            <div class="glass-card project-card reveal">
-                <h4>CVEScan</h4>
-                <p>Self-hosted eight-stage web scanner that also monitors NVD, MITRE and GitHub Advisory feeds, folds in Bandit and Semgrep, and emits LaTeX/PDF reports.</p>
-                <div class="project-tech-tags">
-                    <span>TypeScript</span><span>Semgrep</span><span>NVD</span>
-                </div>
-            </div>
-            <div class="glass-card project-card reveal">
-                <h4>Nakuru City Hub</h4>
-                <p>Mobile-first community PWA for Nakuru residents and the diaspora, with Gemini-powered content polishing, geospatial grounding and speech synthesis.</p>
-                <div class="project-links">
-                    <a href="https://nakurucity.netlify.app/" target="_blank">Live App</a>
-                </div>
-                <div class="project-tech-tags">
-                    <span>React</span><span>Gemini</span><span>PWA</span>
-                </div>
-            </div>
-             <div class="glass-card project-card reveal">
-                <h4>KinSync</h4>
-                <p>Front-end prototype for a next-of-kin digital estate vault: wallet-linked vault dashboard, legacy record sync and emergency delegate status.</p>
-                <div class="project-tech-tags">
-                    <span>React 19</span><span>Vite</span><span>Prototype</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="experience" class="section">
-        <div class="section-header reveal">
-            <h2>Professional <span class="gradient-text">Experience</span></h2>
-            <p>Leadership and technical roles across technology, media, and education.</p>
-            <div class="section-divider"></div>
-        </div>
-        <div class="timeline">
-            <div class="timeline-item reveal">
-                <div class="timeline-header">
-                    <h4>Technology Consultant & Developer</h4>
-                    <span class="timeline-company">Self-Employed</span>
-                    <span class="timeline-date">Sep 2023 - Present</span>
-                </div>
-                <ul class="timeline-body">
-                    <li>Built and deployed production full-stack applications (Maziwa Coop, Sambu Farm Manager) on Cloudflare's serverless edge infrastructure with JWT auth, role-based access, and schema migrations applied live against production D1.</li>
-                    <li>Ran paid incident response and forensics on WordPress estates: recovered a client across four outage episodes, removed a PHP webshell and eight hidden administrator accounts, rotated salts, and cut TTFB from 30+ seconds to 1.1 seconds.</li>
-                    <li>Architected a production lead pipeline connecting Meta Lead Ads to a CRM through Cloudflare Workers and KV, including a Zapier bridge that works around Meta's App Review restriction on direct lead webhooks.</li>
-                    <li>Engineered and audited Solidity smart contracts using static analysis tools (Slither, Mythril); reduced exploit risk surface by 40%.</li>
-                </ul>
-            </div>
-            <div class="timeline-item reveal">
-                <div class="timeline-header">
-                    <h4>Project Manager</h4>
-                    <span class="timeline-company">SIZLAND Limited</span>
-                    <span class="timeline-date">Nov 2025 - Mar 2026</span>
-                </div>
-                <ul class="timeline-body">
-                    <li>Orchestrated Agile and Scrum workflows in a Web3 environment via JIRA and Trello.</li>
-                    <li>Delivered a 39,000-line content curation platform and a notary-mediated escrow system with smart contracts, front-end ABIs and handover documentation, invoiced against the consultancy agreement.</li>
-                </ul>
-            </div>
-             <div class="timeline-item reveal">
-                <div class="timeline-header">
-                    <h4>Indie Game Developer</h4>
-                    <span class="timeline-company">Jampack Incubator</span>
-                    <span class="timeline-date">Feb 2026</span>
-                </div>
-                <ul class="timeline-body">
-                    <li>Developed Mathlantis, an educational web app for Games for Love.</li>
-                    <li>Honored with the "Most Child Friendly Game" title badge.</li>
-                </ul>
-            </div>
-            <div class="timeline-item reveal">
-                <div class="timeline-header">
-                    <h4>Director and Manager</h4>
-                    <span class="timeline-company">Sambu Academy</span>
-                    <span class="timeline-date">Aug 2022 - Present</span>
-                </div>
-                <ul class="timeline-body">
-                    <li>Directed educator teams and implemented SOPs that boosted productivity by 30%.</li>
-                </ul>
-            </div>
-            <div class="timeline-item reveal">
-                <div class="timeline-header">
-                    <h4>Technical Director & Firm Manager</h4>
-                    <span class="timeline-company">KASS Media</span>
-                    <span class="timeline-date">Feb 2019 - Apr 2023</span>
-                </div>
-                <ul class="timeline-body">
-                    <li>Led technical operations, logistics, and firm management over a multi-year tenure.</li>
-                </ul>
-            </div>
-        </div>
-
-        <h3 style="text-align: center; margin: 60px 0 30px; font-size: 22px;">Professional & Technical Certifications</h3>
-        <div class="cert-grid reveal">
-            <div class="glass-card cert-item cert-featured">
-                <a href="certificate.pdf" target="_blank" rel="noopener noreferrer" class="cert-year" style="text-decoration:none; display:inline-block; text-align:center; background: rgba(46, 160, 67, 0.12); border: 1px solid var(--accent-green); color: var(--accent-green);">92% &middot; View</a>
-                <div>
-                    <div class="cert-name" style="color: var(--text-primary); font-weight: 600;">SkillQuest &mdash; Generative AI Literacy</div>
-                    <div class="cert-provider">SkillUP by Simplilearn &middot; 23/25 &middot; Cert. No. 44822733 &middot; 2026</div>
-                </div>
-            </div>
-            <div class="glass-card cert-item">
-                <span class="cert-year" style="display:inline-block; text-align:center; font-size:11px; padding: 4px 8px; background: rgba(0, 240, 255, 0.1); border: 1px solid var(--accent-cyan); border-radius: 4px; color: var(--accent-cyan);">In Progress</span>
-                <div>
-                    <div class="cert-name">CompTIA Cloud+ (CV0-003) Specialization</div>
-                    <div class="cert-provider">Coursera</div>
-                </div>
-            </div>
-            <div class="glass-card cert-item">
-                <a href="https://drive.google.com/file/d/1c48EGdqSb5MEZc-V16A7E3OrAWnvODHN/view?usp=drive_web" target="_blank" rel="noopener noreferrer" class="cert-year" style="text-decoration:none; display:inline-block; text-align:center;">View</a>
-                <div>
-                    <div class="cert-name">Full Stack Web3 Development Crash Course</div>
-                    <div class="cert-provider">Cyfrin Updraft</div>
-                </div>
-            </div>
-            <div class="glass-card cert-item">
-                <a href="https://drive.google.com/file/d/1c48EGdqSb5MEZc-V16A7E3OrAWnvODHN/view?usp=drive_web" target="_blank" rel="noopener noreferrer" class="cert-year" style="text-decoration:none; display:inline-block; text-align:center;">View</a>
-                <div>
-                    <div class="cert-name">Solidity Smart Contract Development</div>
-                    <div class="cert-provider">Cyfrin Updraft</div>
-                </div>
-            </div>
-            <div class="glass-card cert-item">
-                <a href="https://drive.google.com/file/d/1c48EGdqSb5MEZc-V16A7E3OrAWnvODHN/view?usp=drive_web" target="_blank" rel="noopener noreferrer" class="cert-year" style="text-decoration:none; display:inline-block; text-align:center;">View</a>
-                <div>
-                    <div class="cert-name">Smart Contract Security</div>
-                    <div class="cert-provider">Cyfrin Updraft</div>
-                </div>
-            </div>
-            <div class="glass-card cert-item">
-                <a href="Cybersecurity-Awareness-and-Innovation.pdf" target="_blank" rel="noopener noreferrer" class="cert-year" style="text-decoration:none; display:inline-block; text-align:center;">View</a>
-                <div>
-                    <div class="cert-name">Cybersecurity Awareness and Innovation</div>
-                    <div class="cert-provider">EIT Digital / Coursera</div>
-                </div>
-            </div>
-            <div class="glass-card cert-item">
-                <a href="Wix-Cert.pdf" target="_blank" rel="noopener noreferrer" class="cert-year" style="text-decoration:none; display:inline-block; text-align:center;">View</a>
-                <div>
-                    <div class="cert-name">Develop a Company Website with Wix</div>
-                    <div class="cert-provider">Coursera Project Network</div>
-                </div>
-            </div>
-            <div class="glass-card cert-item">
-                <a href="Virtual-Assistants-Cert.pdf" target="_blank" rel="noopener noreferrer" class="cert-year" style="text-decoration:none; display:inline-block; text-align:center;">View</a>
-                <div>
-                    <div class="cert-name">Leveraging VAs for Personal Productivity</div>
-                    <div class="cert-provider">Coursera Instructor Network</div>
-                </div>
-            </div>
-            <div class="glass-card cert-item">
-                <a href="https://drive.google.com/file/d/1UM1mJUvmo2YlLkKptVxY9j7VMMg9VqgF/view?usp=drive_web" target="_blank" rel="noopener noreferrer" class="cert-year" style="text-decoration:none; display:inline-block; text-align:center;">View</a>
-                <div>
-                    <div class="cert-name">Learn HTML Course</div>
-                    <div class="cert-provider">Course Completion Certificate</div>
-                </div>
-            </div>
-        </div>
-
-        <h3 style="text-align: center; margin: 60px 0 30px; font-size: 22px;">Security & Defense Training</h3>
-        <div class="cert-grid reveal">
-            <div class="glass-card cert-item">
-                <a href="https://drive.google.com/file/d/1-C4SY6K5gdFM5vTcEyVnQ1uzsKtoqQoG/view?usp=drive_web" target="_blank" rel="noopener noreferrer" class="cert-year" style="text-decoration:none; display:inline-block; text-align:center;">View</a>
-                <div>
-                    <div class="cert-name">Cybersecurity Awareness</div>
-                    <div class="cert-provider">DCSA / CDSE</div>
-                </div>
-            </div>
-            <div class="glass-card cert-item">
-                <a href="Establishing-Insider-Threat-Program.pdf" target="_blank" rel="noopener noreferrer" class="cert-year" style="text-decoration:none; display:inline-block; text-align:center;">View</a>
-                <div>
-                    <div class="cert-name">Establishing an Insider Threat Program</div>
-                    <div class="cert-provider">DCSA</div>
-                </div>
-            </div>
-            <div class="glass-card cert-item">
-                <a href="Insider-Threat-Awareness.pdf" target="_blank" rel="noopener noreferrer" class="cert-year" style="text-decoration:none; display:inline-block; text-align:center;">View</a>
-                <div>
-                    <div class="cert-name">Insider Threat Awareness</div>
-                    <div class="cert-provider">DCSA</div>
-                </div>
-            </div>
-            <div class="glass-card cert-item">
-                <a href="Maximizing-Organizational-Trust.pdf" target="_blank" rel="noopener noreferrer" class="cert-year" style="text-decoration:none; display:inline-block; text-align:center;">View</a>
-                <div>
-                    <div class="cert-name">Maximizing Organizational Trust</div>
-                    <div class="cert-provider">DCSA</div>
-                </div>
-            </div>
-        </div>
-
-        <h3 style="text-align: center; margin: 60px 0 30px; font-size: 22px;">Personal Development, Soft Skills & Extracurriculars</h3>
-        <div class="cert-grid reveal">
-            <div class="glass-card cert-item">
-                <a href="Non-Technical-Life-Skills.pdf" target="_blank" rel="noopener noreferrer" class="cert-year" style="text-decoration:none; display:inline-block; text-align:center;">View</a>
-                <div>
-                    <div class="cert-name">Non-Technical Life Skills</div>
-                    <div class="cert-provider">Course Completion Certificate</div>
-                </div>
-            </div>
-            <div class="glass-card cert-item">
-                <a href="https://drive.google.com/file/d/1tvmXD4JFJcB9--nSBNPSQ_fMUfUNGBwb/view?usp=drive_web" target="_blank" rel="noopener noreferrer" class="cert-year" style="text-decoration:none; display:inline-block; text-align:center;">View</a>
-                <div>
-                    <div class="cert-name">Guitar Knowledge Level 1</div>
-                    <div class="cert-provider">Yousician Certificate</div>
-                </div>
-            </div>
-            <div class="glass-card cert-item">
-                <span class="cert-year" style="display:inline-block; text-align:center;">View</span>
-                <div>
-                    <div class="cert-name">Great Learning Verification Portal</div>
-                    <div class="cert-provider">Great Learning Verification Link</div>
-                </div>
-            </div>
-        </div>
-
-        <h3 style="text-align: center; margin: 60px 0 30px; font-size: 22px;">Education</h3>
-        <div class="timeline" style="margin-bottom: 20px;">
-            <div class="timeline-item reveal">
-                <div class="timeline-header">
-                    <h4>CompTIA Cloud+ (CV0-003) Specialization</h4>
-                    <span class="timeline-company">Coursera</span>
-                    <span class="timeline-date">In Progress</span>
-                </div>
-            </div>
-            <div class="timeline-item reveal">
-                <div class="timeline-header">
-                    <h4>B.A. International Relations & Diplomacy with I.T.</h4>
-                    <span class="timeline-company">Maseno University</span>
-                    <span class="timeline-date">2008 - </span>
-                </div>
-            </div>
-            <div class="timeline-item reveal">
-                <div class="timeline-header">
-                    <h4>Certificate in HTML Web Language</h4>
-                    <span class="timeline-company">Star College</span>
-                    <span class="timeline-date">2008</span>
-                </div>
-            </div>
-            <div class="timeline-item reveal">
-                <div class="timeline-header">
-                    <h4>Kenya Certificate of Secondary Education</h4>
-                    <span class="timeline-company">Milimani High School</span>
-                    <span class="timeline-date">2006 - 2007</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="footer">
-        <div class="footer-links">
-            <a href="https://github.com/llakterian" target="_blank">GitHub</a>
-            <a href="https://linkedin.com/in/cheruiyoot-sambu" target="_blank">LinkedIn</a>
-            <a href="https://x.com/llakterian" target="_blank">X (Twitter)</a>
-        </div>
+    <footer class="specimen-footer">
         <p>&copy; 2026 Leonard Sambu. Security Researcher & Developer.</p>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
