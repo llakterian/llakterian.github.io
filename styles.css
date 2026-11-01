@@ -228,12 +228,6 @@ button {
 
 .specimen-section {
   margin-bottom: var(--space-3xl);
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
-
-.specimen-section.visible {
   opacity: 1;
   transform: translateY(0);
 }
