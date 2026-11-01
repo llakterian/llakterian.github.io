@@ -260,8 +260,10 @@ button {
    SPECIMEN LAYOUT — Asymmetric columns
    ============================================================================ */
 .specimen-layout {
-  margin-left: 84px;
-  max-width: calc(var(--container-max) - 84px);
+  /* Reserve the fully-expanded index width as a gutter so the hover-expanded
+     tab never covers page content. */
+  margin-left: 220px;
+  max-width: calc(var(--container-max) - 100px);
   padding: var(--space-2xl) var(--gutter) var(--space-3xl);
 }
 
@@ -991,7 +993,7 @@ button {
 .timeline-item::before {
   content: '';
   position: absolute;
-  left: calc(-120px - var(--space-xl) - 6px);
+  left: calc(-1 * var(--space-xl) - 6px);
   top: 0;
   width: 12px;
   height: 12px;
@@ -1108,9 +1110,13 @@ button {
   line-height: 1.5;
   width: 100%;
   text-align: left;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-areas:
+    "name chevron"
+    "meta chevron";
   align-items: center;
-  gap: var(--space-md);
+  column-gap: var(--space-md);
   cursor: pointer;
 }
 
@@ -1120,23 +1126,26 @@ button {
 }
 
 .cert-name {
-  font-weight: 500;
+  grid-area: name;
+  font-weight: 600;
   color: var(--text-primary);
-  flex: 1;
+  font-size: 14px;
+  line-height: 1.4;
 }
 
 .cert-meta {
+  grid-area: meta;
   font-family: var(--font-mono);
   font-size: 11px;
   color: var(--text-muted);
-  flex-shrink: 0;
+  margin-top: 2px;
 }
 
 .cert-chevron {
+  grid-area: chevron;
   font-size: 10px;
   color: var(--text-muted);
   transition: transform var(--motion-base);
-  flex-shrink: 0;
 }
 
 .cert-panel {
@@ -1373,7 +1382,7 @@ button {
   opacity: 1;
 }
 .specimen-footer {
-  margin-left: 84px;
+  margin-left: 220px;
   padding: var(--space-xl) var(--gutter);
   border-top: 1px solid var(--border-subtle);
   font-family: var(--font-mono);
