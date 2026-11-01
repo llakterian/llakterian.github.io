@@ -17,7 +17,7 @@
 
   --text-primary: #f5f5f7;
   --text-secondary: #b3b3b3;
-  --text-muted: #888888;
+  --text-muted: #999999;
   --text-inverse: #121212;
 
   --accent-primary: #fc4c01;      /* Vibrant orange — CTAs only */
@@ -179,6 +179,13 @@ button {
   flex-direction: column;
   justify-content: center;
   box-shadow: var(--elev-2);
+  opacity: 0.3;
+  transition: opacity var(--motion-base), transform var(--motion-base);
+}
+
+.specimen-index:hover {
+  opacity: 1;
+  transform: translateY(-50%) translateX(4px);
 }
 
 .specimen-index ol {
@@ -1361,6 +1368,8 @@ button {
   .specimen-index {
     position: sticky;
     top: 0;
+    left: 0;
+    transform: none;
     width: 100%;
     height: auto;
     bottom: auto;
@@ -1371,6 +1380,9 @@ button {
     overflow-x: auto;
     justify-content: flex-start;
     gap: var(--space-lg);
+    opacity: 1;
+    box-shadow: none;
+    border-radius: 0;
   }
 
   .specimen-index ol {
@@ -1415,6 +1427,18 @@ button {
     padding-bottom: var(--space-xl);
   }
 
+  .skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
+
+  .documents-list {
+    grid-template-columns: 1fr;
+  }
+
+  .media-channels-list {
+    grid-template-columns: 1fr;
+  }
+
   .specimen-footer {
     margin-left: 0;
   }
@@ -1442,7 +1466,19 @@ button {
   }
 
   .contact-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
+  }
+
+  .documents-list {
+    grid-template-columns: 1fr;
+  }
+
+  .media-channels-list {
+    grid-template-columns: 1fr;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
   }
 
   .section-header {
@@ -1457,6 +1493,34 @@ button {
 
   .section-number {
     font-size: 32px;
+  }
+
+  .hero-lead {
+    font-size: 18px;
+  }
+
+  .hero-sub {
+    font-size: 14px;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .finding-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .audit-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cert-accordion-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline {
+    padding-left: var(--space-md);
   }
 }
 
@@ -1549,4 +1613,47 @@ button {
   font-family: var(--font-mono);
   font-size: 11px;
   color: var(--text-muted);
+}
+
+/* ============================================================================
+   HERO IDENTITY — Name & Title
+   ============================================================================ */
+.hero-identity {
+  margin-bottom: var(--space-2xl);
+  padding-bottom: var(--space-xl);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.hero-name {
+  font-family: var(--font-display);
+  font-size: clamp(36px, 6vw, 64px);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  margin-bottom: var(--space-sm);
+}
+
+.hero-title {
+  font-family: var(--font-body);
+  font-size: clamp(14px, 2vw, 18px);
+  font-weight: 500;
+  color: var(--accent-primary);
+  letter-spacing: 0.02em;
+  line-height: 1.4;
+}
+
+.hero-divider {
+  color: var(--text-muted);
+  margin: 0 var(--space-xs);
+  font-weight: 300;
+}
+
+@media (max-width: 640px) {
+  .hero-name {
+    font-size: 32px;
+  }
+  .hero-title {
+    font-size: 12px;
+  }
 }
