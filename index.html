@@ -20,6 +20,7 @@
         <ol>
             <li><a href="#01-now"><span class="num">01</span><span class="label">Now</span></a></li>
             <li><a href="#01-skills"><span class="num">01b</span><span class="label">Skills</span></a></li>
+            <li><a href="#01c-agents"><span class="num">01c</span><span class="label">Agents</span></a></li>
             <li><a href="#02-security"><span class="num">02</span><span class="label">Security</span></a></li>
             <li><a href="#03-blockchain"><span class="num">03</span><span class="label">Blockchain</span></a></li>
             <li><a href="#04-projects"><span class="num">04</span><span class="label">Projects</span></a></li>
@@ -136,6 +137,20 @@
                         </div>
                     </div>
                     <div class="skill-group">
+                        <h3 class="skill-group-title">Agents & Evals</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Sub-agent Orchestration</span>
+                            <span class="skill-tag">Typed Handoff Contracts</span>
+                            <span class="skill-tag">Eval Harnesses</span>
+                            <span class="skill-tag">LLM-as-Judge</span>
+                            <span class="skill-tag">Baseline Regression Gating</span>
+                            <span class="skill-tag">Deterministic Guardrails</span>
+                            <span class="skill-tag">Prompt-Injection Defence</span>
+                            <span class="skill-tag">AGENTS.md</span>
+                            <span class="skill-tag">MCP Client & Server</span>
+                        </div>
+                    </div>
+                    <div class="skill-group">
                         <h3 class="skill-group-title">Media & AI Video Production</h3>
                         <div class="skill-tags">
                             <span class="skill-tag">DaVinci Resolve</span>
@@ -160,6 +175,79 @@
                             <span class="skill-tag">CI/CD</span>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 01c AGENT ENGINEERING -->
+        <section id="01c-agents" class="specimen-section">
+            <header class="section-header">
+                <span class="section-number" aria-hidden="true">01c</span>
+                <h2 class="section-title">Agent Engineering</h2>
+            </header>
+            <div class="section-body">
+                <p class="section-lead">Making agents dependable the same way I make findings defensible: free deterministic guardrails first, an LLM-as-judge only for what regex cannot answer, and a baseline gate that fails the build when any tracked metric drops — never a regenerated baseline to go green.</p>
+                <div class="audit-grid">
+                    <article class="audit-card tilt-card" data-tilt>
+                        <header class="audit-header">
+                            <span class="audit-protocol">Typed Handoff Contracts</span>
+                            <span class="audit-type">Design</span>
+                        </header>
+                        <p class="audit-desc">Sub-agents pass typed records validated at both ends instead of prose between stages, so a malformed stage fails loudly at its own stage — not three stages later as a confusing eval failure.</p>
+                        <div class="audit-tags">
+                            <span>Schema Validation</span>
+                            <span>Fail-Fast</span>
+                            <span>Contracts</span>
+                        </div>
+                    </article>
+                    <article class="audit-card tilt-card" data-tilt>
+                        <header class="audit-header">
+                            <span class="audit-protocol">Guardrails Before Judges</span>
+                            <span class="audit-type">Eval Design</span>
+                        </header>
+                        <p class="audit-desc">Ten deterministic guardrails — placeholder text, leaked secrets, invented technology, an echoing critic — gate an LLM-as-judge score on completeness, feasibility and taste. A baseline comparison fails the build when any tracked metric drops.</p>
+                        <div class="audit-tags">
+                            <span>LLM-as-Judge</span>
+                            <span>Regression Gate</span>
+                            <span>Deterministic</span>
+                        </div>
+                    </article>
+                    <article class="audit-card tilt-card" data-tilt>
+                        <header class="audit-header">
+                            <span class="audit-protocol">AI Shipped to Production</span>
+                            <span class="audit-type">Real Users</span>
+                        </header>
+                        <p class="audit-desc">Grounded agronomic advice over Groq with server-side key proxying and stale-on-error fallback (Shambani); an AI coach on a full Model Context Protocol client stack (QuitVaping); bilingual English/Swahili classifier (Uplift); Gemini Expected Value logic (NimbusTrade).</p>
+                        <div class="audit-tags">
+                            <span>Groq</span>
+                            <span>MCP</span>
+                            <span>Supabase</span>
+                        </div>
+                    </article>
+                    <article class="audit-card tilt-card" data-tilt>
+                        <header class="audit-header">
+                            <span class="audit-protocol">Personal Agent Harness</span>
+                            <span class="audit-type">Daily Driver</span>
+                        </header>
+                        <p class="audit-desc">Curated skill library, scheduled agents, task dispatch, sandboxed tool execution and a verification-evidence store — plus the Agent MD that keeps a long session on rails.</p>
+                        <div class="audit-tags">
+                            <span>Orchestration</span>
+                            <span>AGENTS.md</span>
+                            <span>Tool Sandboxing</span>
+                        </div>
+                    </article>
+                    <article class="audit-card tilt-card" data-tilt>
+                        <header class="audit-header">
+                            <span class="audit-protocol">Prompt Injection by Default</span>
+                            <span class="audit-type">Security</span>
+                        </header>
+                        <p class="audit-desc">User text is data, not instruction: interpolated into delimited blocks and never executed, with every stage's output schema-validated before the next stage sees it.</p>
+                        <div class="audit-tags">
+                            <span>Injection Defence</span>
+                            <span>Context Engineering</span>
+                            <span>Validation</span>
+                        </div>
+                    </article>
                 </div>
             </div>
         </section>
@@ -331,7 +419,7 @@
                 <h2 class="section-title">Projects</h2>
             </header>
             <div class="section-body">
-                <p class="section-lead">Production applications spanning farm management, African agronomy, Web3 and AI tooling. All installable PWAs with offline-first architecture.</p>
+                <p class="section-lead">Production applications spanning farm management, African agronomy, Web3 and AI tooling. All installable PWAs with offline-first architecture. Beyond the apps: an agent eval harness, a CVE monitoring pipeline, and a generative video pipeline.</p>
                 <div class="project-grid">
                     <article class="project-card tilt-card" data-tilt>
                         <header class="project-header">
@@ -503,6 +591,64 @@
                             <div class="project-links">
                                 <a href="https://safeshamba.us.ci" target="_blank" rel="noopener" class="project-link">Live</a>
                                 <a href="https://github.com/llakterian/multisig" target="_blank" rel="noopener" class="project-link">Repo</a>
+                            </div>
+                        </footer>
+                    </article>
+                    <article class="project-card tilt-card" data-tilt>
+                        <header class="project-header">
+                            <h3 class="project-title">fluxharness</h3>
+                            <span class="project-type">Eval Harness</span>
+                        </header>
+                        <p class="project-desc">An eval harness built to answer one question: can an agent be made dependable. Three-stage workflow (Scout → Architect → Critic) handing off typed contracts validated at both ends. Ten deterministic guardrails gate an LLM-as-judge on completeness, feasibility and taste; a baseline gate fails the build when any tracked metric drops. 22 offline tests, including one that reads the source to enforce that scoring can never import the system it measures.</p>
+                        <footer class="project-footer">
+                            <div class="project-tech">
+                                <span>Python</span>
+                                <span>LLM-as-Judge</span>
+                                <span>Deterministic Guardrails</span>
+                            </div>
+                        </footer>
+                    </article>
+                    <article class="project-card tilt-card" data-tilt>
+                        <header class="project-header">
+                            <h3 class="project-title">AI Auto Video Generator</h3>
+                            <span class="project-type">Content Pipeline</span>
+                        </header>
+                        <p class="project-desc">Sequential generative pipeline for short-form video: keyword extraction → story generation → image generation → voiceover → video assembly → captioning. Each stage an isolated module behind its own API boundary so any provider swaps without touching the rest.</p>
+                        <footer class="project-footer">
+                            <div class="project-tech">
+                                <span>Python</span>
+                                <span>Multi-provider LLM</span>
+                                <span>Image APIs</span>
+                            </div>
+                        </footer>
+                    </article>
+                    <article class="project-card tilt-card" data-tilt>
+                        <header class="project-header">
+                            <h3 class="project-title">CVEScan</h3>
+                            <span class="project-type">Security Scanner</span>
+                        </header>
+                        <p class="project-desc">Self-hosted eight-stage web scanner (tech fingerprinting, security headers, critical paths, directory brute force, JavaScript analysis, API discovery, injection testing, CORS/CSRF) that also monitors NVD, MITRE and GitHub Advisory feeds and emits LaTeX/PDF reports. 6,400 lines of TypeScript with a scheduler and webhook notifications.</p>
+                        <footer class="project-footer">
+                            <div class="project-tech">
+                                <span>TypeScript</span>
+                                <span>Express</span>
+                                <span>Semgrep</span>
+                                <span>LaTeX</span>
+                            </div>
+                        </footer>
+                    </article>
+                    <article class="project-card tilt-card" data-tilt>
+                        <header class="project-header">
+                            <h3 class="project-title">Curated Feed</h3>
+                            <span class="project-type">Curation Engine</span>
+                        </header>
+                        <p class="project-desc">39,000-line content curation platform with Groq (Llama 3.3 70B) real-time classification, KV-backed storage and on-chain components on Base. Delivered under the SIZLAND consultancy with handover documentation.</p>
+                        <footer class="project-footer">
+                            <div class="project-tech">
+                                <span>Groq</span>
+                                <span>Llama 3.3 70B</span>
+                                <span>KV Storage</span>
+                                <span>Base</span>
                             </div>
                         </footer>
                     </article>
@@ -874,7 +1020,7 @@
                             <span class="document-icon">📄</span>
                             <div class="document-info">
                                 <span class="document-name">CV — Sambu Leonard</span>
-                                <span class="document-desc">Modern CV with Rare UI design · 4 pages · PDF</span>
+                                <span class="document-desc">Modern CV with Rare UI design · 5 pages · PDF</span>
                             </div>
                             <span class="document-action">Download →</span>
                         </a>
