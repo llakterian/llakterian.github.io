@@ -45,7 +45,7 @@
             <div class="hero-content">
                 <div class="hero-text">
                     <p class="hero-lead">Security researcher and smart contract auditor. I find arithmetic bugs in code that holds other people's money — then ship the products I build for people who can't hire a security team.</p>
-                    <p class="hero-sub">Currently: independent audits across Frax, Paxos, USDai, Cetus. Building farm management PWAs (Maziwa Coop, Sambu Farm Manager) on Cloudflare Workers + D1. Weather intelligence for 47 Kenyan counties via Shambani. Producing AI video content for YouTube and TikTok, with four years as a studio technical director and editor before generative AI.</p>
+                    <p class="hero-sub">Currently: independent audits across DeFi, stablecoin and L2-bridge codebases — client names withheld under NDA. Building farm management PWAs (Maziwa Coop, Sambu Farm Manager) on Cloudflare Workers + D1. Weather intelligence for 47 Kenyan counties via Shambani. Producing AI video content for YouTube and TikTok, with four years as a studio technical director and editor before generative AI.</p>
                 </div>
                 <div class="hero-stats" aria-label="Key metrics">
                     <div class="stat-card tilt-card" data-tilt>
@@ -259,15 +259,15 @@
                 <h2 class="section-title">Security Research</h2>
             </header>
             <div class="section-body">
-                <p class="section-lead">60+ bug bounty programs across HackenProof, HackerOne, Bugcrowd, Immunefi, OKX. 20+ smart contract audits. Proudest finds are arithmetic: sfrxETH underflow, tokenize.it exit drain.</p>
+                <p class="section-lead">60+ bug bounty programs across HackenProof, HackerOne, Bugcrowd, Immunefi, OKX. 20+ smart contract audits across DeFi, stablecoins, L2 bridges and enterprise Web2. Findings are shown as method, not mechanics — protocol names and bug details stay withheld under disclosure agreements.</p>
                 <div class="finding-grid">
                     <article class="finding-card tilt-card bouncy-accordion" data-accordion>
                         <header class="finding-header">
                             <span class="finding-badge high">High Severity</span>
-                            <h3 class="finding-title">sfrxETH Withdrawal Underflow</h3>
+                            <h3 class="finding-title">Top-10 DeFi Vault — Funds Risk</h3>
                         </header>
                         <div class="finding-content">
-                            <p>Cached <code>totalAssets</code> drifted against live figure in Frax's sfrxETH withdrawal path, stranding LP redemptions. Runnable Foundry PoC against mainnet fork.</p>
+                            <p>Funds-risk finding in a top-10 TVL ERC-4626 vault, proven with a runnable Foundry PoC against a live mainnet fork and accepted by the program. Protocol and mechanics withheld under disclosure agreement.</p>
                             <ul class="finding-tags">
                                 <li>ERC-4626</li>
                                 <li>Foundry</li>
@@ -278,42 +278,42 @@
                     <article class="finding-card tilt-card bouncy-accordion" data-accordion>
                         <header class="finding-header">
                             <span class="finding-badge critical">Critical</span>
-                            <h3 class="finding-title">tokenize.it Exit Payout Drain</h3>
+                            <h3 class="finding-title">Tokenization Platform — Exit Payout</h3>
                         </header>
                         <div class="finding-content">
-                            <p>Caller-supplied base price let a co-investor walk off with an entire exit. Complete breakdown of server-side authorization checks.</p>
+                            <p>Funds-risk finding in a tokenization platform's exit path, delivered with a complete server-side authorization breakdown and root-cause analysis. Protocol and mechanics withheld under disclosure agreement.</p>
                             <ul class="finding-tags">
-                                <li>Access Control</li>
-                                <li>Pricing Oracle</li>
-                                <li>Foundry</li>
+                                <li>Web3</li>
+                                <li>RCA Report</li>
+                                <li>Withheld</li>
                             </ul>
                         </div>
                     </article>
                     <article class="finding-card tilt-card bouncy-accordion" data-accordion>
                         <header class="finding-header">
-                            <span class="finding-badge high">High Severity</span>
-                            <h3 class="finding-title">Blind Stored XSS → PII Leak</h3>
+                            <span class="finding-badge critical">Critical</span>
+                            <h3 class="finding-title">Enterprise Backoffice — Data Exposure</h3>
                         </header>
                         <div class="finding-content">
-                            <p>Injected Blind XSS payload into public registration form; executed in authenticated backoffice dashboard. Leaked National IDs, Phone Numbers.</p>
+                            <p>Critical exposure of national identifiers and phone numbers inside an internal enterprise dashboard; reported with remediation steps and triaged to completion. Mechanics withheld under disclosure agreement.</p>
                             <ul class="finding-tags">
-                                <li>Stored XSS</li>
+                                <li>Web2</li>
                                 <li>PII Exposure</li>
-                                <li>Backoffice</li>
+                                <li>Triaged</li>
                             </ul>
                         </div>
                     </article>
                     <article class="finding-card tilt-card bouncy-accordion" data-accordion>
                         <header class="finding-header">
                             <span class="finding-badge medium">Medium</span>
-                            <h3 class="finding-title">Sequential IDOR Address Manipulation</h3>
+                            <h3 class="finding-title">B2B Platform — Cross-Account Access</h3>
                         </header>
                         <div class="finding-content">
-                            <p>Sequential numeric identifiers allowed unauthenticated manipulation and deletion of other users' addresses. Complete authorization bypass.</p>
+                            <p>Unauthenticated cross-account record access in a B2B platform, allowing manipulation of other customers' entries; triaged and rewarded. Mechanics withheld under disclosure agreement.</p>
                             <ul class="finding-tags">
-                                <li>IDOR</li>
-                                <li>BOLA</li>
-                                <li>Authorization</li>
+                                <li>Web2</li>
+                                <li>Cross-Account</li>
+                                <li>Rewarded</li>
                             </ul>
                         </div>
                     </article>
@@ -339,73 +339,78 @@
                 <h2 class="section-title">Blockchain Audits</h2>
             </header>
             <div class="section-body">
-                <p class="section-lead">Independent security audits of DeFi and L2 protocols. Comprehensive Foundry PoCs with mainnet-fork verification. Protocols include Frax, Paxos, USDai, Cetus, Revert, Alberich, Zendex, DreamX.</p>
+                <p class="section-lead">Independent security audits of DeFi, stablecoin, L2 and lending protocols. Client names withheld under NDA; findings delivered with severity, root cause and remediation, verified with Foundry PoCs on mainnet forks.</p>
                 <div class="audit-grid">
                     <article class="audit-card tilt-card" data-tilt>
                         <header class="audit-header">
-                            <span class="audit-protocol">Frax Finance</span>
-                            <span class="audit-type">sfrxETH Vault</span>
+                            <span class="audit-protocol">DeFi Vault Protocol</span>
+                            <span class="audit-type">ERC-4626 Vaults</span>
                         </header>
-                        <p class="audit-desc">Underflow in withdrawal path where cached totalAssets drifts against live figure, stranding LP redemptions.</p>
+                        <p class="audit-desc">Withdrawal and accounting path review of an ERC-4626 vault system; findings delivered as runnable Foundry PoCs on a mainnet fork. Client name and mechanics withheld.</p>
                         <div class="audit-tags">
                             <span>ERC-4626</span>
-                            <span>Arithmetic</span>
                             <span>Mainnet Fork</span>
+                            <span>Withheld</span>
                         </div>
                     </article>
                     <article class="audit-card tilt-card" data-tilt>
                         <header class="audit-header">
-                            <span class="audit-protocol">Paxos</span>
-                            <span class="audit-type">Stablecoin</span>
+                            <span class="audit-protocol">Stablecoin Issuer</span>
+                            <span class="audit-type">Mint &amp; Burn</span>
                         </header>
-                        <p class="audit-desc">Access control state inconsistency allowing unauthorized mint/burn operations under specific governance transitions.</p>
+                        <p class="audit-desc">Access-control and governance-transition review across mint/burn paths for a stablecoin platform; findings delivered with remediation. Client name withheld.</p>
                         <div class="audit-tags">
                             <span>Access Control</span>
                             <span>Governance</span>
+                            <span>Withheld</span>
                         </div>
                     </article>
                     <article class="audit-card tilt-card" data-tilt>
                         <header class="audit-header">
-                            <span class="audit-protocol">USDai</span>
-                            <span class="audit-type">Yield Vault</span>
+                            <span class="audit-protocol">Yield Vault Protocol</span>
+                            <span class="audit-type">Reward Distribution</span>
                         </header>
-                        <p class="audit-desc">Storage growth DoS via unbounded mapping iteration in reward distribution mechanism.</p>
+                        <p class="audit-desc">Storage-growth and iteration-cost review of a yield-distribution mechanism; findings delivered with remediation. Client name withheld.</p>
                         <div class="audit-tags">
-                            <span>DoS</span>
                             <span>Storage</span>
+                            <span>Rewards</span>
+                            <span>Withheld</span>
                         </div>
                     </article>
                     <article class="audit-card tilt-card" data-tilt>
                         <header class="audit-header">
-                            <span class="audit-protocol">Cetus</span>
-                            <span class="audit-type">CLMM DEX</span>
+                            <span class="audit-protocol">Concentrated-Liquidity DEX</span>
+                            <span class="audit-type">CLMM</span>
                         </header>
-                        <p class="audit-desc">Concentrated liquidity math edge case allowing position manipulation during tick boundary transitions.</p>
+                        <p class="audit-desc">Concentrated-liquidity math review across tick-boundary transitions and position accounting; client name withheld.</p>
                         <div class="audit-tags">
                             <span>CLMM</span>
                             <span>Math</span>
+                            <span>Withheld</span>
                         </div>
                     </article>
                     <article class="audit-card tilt-card" data-tilt>
                         <header class="audit-header">
-                            <span class="audit-protocol">Revert</span>
-                            <span class="audit-type">L2 Bridge</span>
+                            <span class="audit-protocol">L2 Bridge Protocol</span>
+                            <span class="audit-type">Message Passing</span>
                         </header>
-                        <p class="audit-desc">Message passing verification gap allowing replay under specific finality conditions.</p>
+                        <p class="audit-desc">Cross-chain message-passing and finality-condition review of an L2 bridge; findings delivered with remediation. Client name and mechanics withheld.</p>
                         <div class="audit-tags">
                             <span>Bridge</span>
-                            <span>Replay</span>
+                            <span>Finality</span>
+                            <span>Withheld</span>
                         </div>
                     </article>
                     <article class="audit-card tilt-card" data-tilt>
                         <header class="audit-header">
-                            <span class="audit-protocol">Alberich</span>
-                            <span class="audit-type">Lending</span>
+                            <span class="audit-protocol">Lending Protocol</span>
+                            <span class="audit-type">Interest Rates</span>
                         </header>
-                        <p class="audit-desc">Interest rate model manipulation via precision loss in utilization calculation at extreme bounds.</p>
+                        <p class="audit-desc">Interest-rate model and utilization-boundary review of a lending market; findings delivered with remediation. Client name and mechanics withheld.</p>
                         <div class="audit-tags">
-                            <span>Precision</span>
+                            <span>Lending</span>
                             <span>Interest Rate</span>
+                            <span>Withheld</span>
                         </div>
                     </article>
                 </div>
