@@ -6,7 +6,6 @@
 # root, which is what llakterian.github.io serves:
 #   /Sambu_Leonard_CV.pdf        light: job portals, ATS, printing
 #   /Sambu_Leonard_CV_dark.pdf   dark: the site's look, for reading on screen
-# The FLUX application copy is kept in sync too, if it exists.
 #
 # Usage (normally via the Makefile: `make cv`):
 #   cv/build_cv.sh                 # build, sync, verify locally
@@ -17,7 +16,6 @@ set -uo pipefail
 CV_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REPO="$(dirname "$CV_DIR")"
 BUILD="$CV_DIR/build"
-FLUX_COPY="/home/c0bw3b/work/flux/CV_for_FLUX.pdf"
 LIGHT="$REPO/Sambu_Leonard_CV.pdf"
 DARK="$REPO/Sambu_Leonard_CV_dark.pdf"
 
@@ -45,7 +43,7 @@ build() {
     echo "ERROR: $job must be 2 pages, it came out as $pages"; exit 1
   fi
   # A dash in the rendered PDF is what the no-dash style rule exists to stop.
-  if pdftotext "$BUILD/$job.pdf" - 2>/dev/null | grep -q '—\|–'; then
+  if pdftotext "$BUILD/$job.pdf" - 2>/dev/null | grep -q $'\u2014\|\u2013'; then
     echo "ERROR: $job still contains an em dash or an en dash"; exit 1
   fi
   echo "==> built $job: 2 pages, no dashes"
@@ -67,7 +65,6 @@ if (( ! CHECK_ONLY )); then
   # --- sync every copy from the one build ----------------------------------
   cp "$BUILD/Sambu_Leonard_CV.pdf" "$LIGHT"
   cp "$BUILD/Sambu_Leonard_CV_dark.pdf" "$DARK"
-  if [[ -f "$FLUX_COPY" ]]; then cp "$LIGHT" "$FLUX_COPY"; fi
 fi
 
 # --- verify -----------------------------------------------------------------
@@ -75,9 +72,6 @@ FAIL=0
 for f in "$LIGHT" "$DARK"; do
   [[ -f "$f" ]] || { echo "ERROR: missing $f (run make cv)"; FAIL=1; }
 done
-if [[ -f "$FLUX_COPY" ]] && ! cmp -s "$LIGHT" "$FLUX_COPY"; then
-  echo "ERROR: FLUX copy differs from the site CV ($FLUX_COPY)"; FAIL=1
-fi
 if [[ -d "$BUILD" ]]; then
   for job in Sambu_Leonard_CV Sambu_Leonard_CV_dark; do
     if [[ -f "$BUILD/$job.pdf" ]] && ! cmp -s "$BUILD/$job.pdf" "$REPO/$job.pdf"; then
