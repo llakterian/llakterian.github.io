@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Leonard Sambu — Security Researcher & Full-Stack Developer</title>
-    <meta name="description" content="I build web apps and test software for security holes before attackers find them. 60+ bug bounty programs, 20+ blockchain code reviews, 10 live apps, plus tech and AI videos on YouTube and TikTok.">
+    <meta name="description" content="I build web apps and test software for security holes before attackers find them. 60+ bug bounty programs, 20+ blockchain code reviews, 10 live apps, an open-source eval harness for AI agents, plus tech and AI videos on YouTube and TikTok.">
     <link rel="canonical" href="https://llakterian.github.io/">
 
     <!-- Link previews (LinkedIn, WhatsApp, X, Slack) -->
     <meta property="og:type" content="profile">
     <meta property="og:url" content="https://llakterian.github.io/">
     <meta property="og:title" content="Leonard Sambu — Security Researcher & Full-Stack Developer">
-    <meta property="og:description" content="I build web apps and test software for security holes. 60+ bug bounty programs, 20+ blockchain code reviews, 10 live apps.">
+    <meta property="og:description" content="I build web apps and test software for security holes. 60+ bug bounty programs, 20+ blockchain code reviews, 10 live apps, and an open-source eval harness for AI agents.">
     <meta property="og:image" content="https://llakterian.github.io/og-image.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -19,7 +19,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@llakterian">
     <meta name="twitter:title" content="Leonard Sambu — Security Researcher & Full-Stack Developer">
-    <meta name="twitter:description" content="I build web apps and test software for security holes. 60+ bug bounty programs, 20+ blockchain code reviews, 10 live apps.">
+    <meta name="twitter:description" content="I build web apps and test software for security holes. 60+ bug bounty programs, 20+ blockchain code reviews, 10 live apps, and an open-source eval harness for AI agents.">
     <meta name="twitter:image" content="https://llakterian.github.io/og-image.png">
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -185,7 +185,7 @@
                 <h2 class="section-title">AI Work</h2>
             </header>
             <div class="section-body">
-                <p class="section-lead">I add AI to real products and make sure it behaves. Simple automatic checks catch mistakes first, an AI reviewer scores the rest, and nothing ships if quality drops.</p>
+                <p class="section-lead">I add AI to real products and make sure it behaves. Simple automatic checks catch mistakes first, an AI reviewer scores the rest, and nothing ships if quality drops. The open-source version is <a href="https://github.com/llakterian/flux" target="_blank" rel="noopener">fluxharness</a>.</p>
                 <div class="audit-grid">
                     <article class="audit-card">
                         <header class="audit-header">
@@ -384,6 +384,24 @@
                 <div class="project-grid">
                     <article class="project-card tilt-card" data-tilt>
                         <header class="project-header">
+                            <h3 class="project-title">fluxharness</h3>
+                            <span class="project-type">Eval Harness</span>
+                        </header>
+                        <p class="project-desc">An open-source testing tool that decides whether an AI agent is ready to ship. Three agents (Scout → Architect → Critic) pass typed, checked results to each other; ten deterministic checks score first, a separate larger model judges composition and taste, and a saved baseline turns "it worked once" into a regression check. 31 tests, no API key needed. A deliberately weakened copy of the workflow scores 0.000 — the rig catches the regression it was built to catch.</p>
+                        <footer class="project-footer">
+                            <div class="project-tech">
+                                <span>Python</span>
+                                <span>LLM-as-Judge</span>
+                                <span>Deterministic Guardrails</span>
+                                <span>pytest</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/llakterian/flux" target="_blank" rel="noopener" class="project-link">Repo</a>
+                            </div>
+                        </footer>
+                    </article>
+                    <article class="project-card tilt-card" data-tilt>
+                        <header class="project-header">
                             <h3 class="project-title">Sambu Farm Manager</h3>
                             <span class="project-type">Farm PWA</span>
                         </header>
@@ -552,20 +570,6 @@
                             <div class="project-links">
                                 <a href="https://safeshamba.us.ci" target="_blank" rel="noopener" class="project-link">Live</a>
                                 <a href="https://github.com/llakterian/multisig" target="_blank" rel="noopener" class="project-link">Repo</a>
-                            </div>
-                        </footer>
-                    </article>
-                    <article class="project-card tilt-card" data-tilt>
-                        <header class="project-header">
-                            <h3 class="project-title">fluxharness</h3>
-                            <span class="project-type">Eval Harness</span>
-                        </header>
-                        <p class="project-desc">A testing tool that checks whether AI agents can be trusted. Three agents (Scout → Architect → Critic) pass checked results to each other; ten automatic checks plus an AI reviewer score the output, and the build fails if quality drops. 22 automated tests.</p>
-                        <footer class="project-footer">
-                            <div class="project-tech">
-                                <span>Python</span>
-                                <span>LLM-as-Judge</span>
-                                <span>Deterministic Guardrails</span>
                             </div>
                         </footer>
                     </article>
