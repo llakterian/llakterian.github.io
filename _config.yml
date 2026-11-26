@@ -1,0 +1,6 @@
+# GitHub Pages: publish the website only, not the CV source or tooling.
+exclude:
+  - cv
+  - tools
+  - Makefile
+  - README.md

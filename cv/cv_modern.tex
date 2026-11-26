@@ -1,0 +1,274 @@
+\documentclass[10pt,a4paper]{article}
+
+% -------------------------------------------------------------------
+% Packages (pdfLaTeX compatible - uses Source Serif/Sans/Code Pro)
+% -------------------------------------------------------------------
+\usepackage[margin=0.65in,top=0.55in,bottom=0.55in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+% Typography: Source Serif Pro (display), Source Sans Pro (body), Source Code Pro (mono)
+\usepackage{sourceserifpro}
+\usepackage[scaled=0.92]{sourcesanspro}
+\usepackage{sourcecodepro}
+\usepackage{microtype}
+
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{array}
+\usepackage{ragged2e}
+\usepackage{parskip}
+\usepackage{needspace}
+
+% -------------------------------------------------------------------
+% Colors
+% Two looks from one source:
+%   light (default): for printing and CV scanners (ATS). The orange accent
+%     is darkened from the portfolio's #FC4C01 so small text stays readable
+%     on white (contrast > 4.5:1).
+%   dark: the portfolio's Rare UI look, for reading on screen. Build with
+%     `make cv` from the repo root (it builds both).
+% -------------------------------------------------------------------
+\newif\ifdark
+\ifdefined\darkmode \darktrue \fi
+\ifdark
+  \definecolor{pagebg}{HTML}{121212}
+  \definecolor{accent}{HTML}{FC4C01}    % Portfolio orange
+  \definecolor{brand}{HTML}{FC4C01}
+  \definecolor{printtext}{HTML}{F5F5F7}
+  \definecolor{printmuted}{HTML}{A8A8A8}
+  \definecolor{printborder}{HTML}{333333}
+\else
+  \definecolor{pagebg}{HTML}{FFFFFF}
+  \definecolor{accent}{HTML}{C2410C}    % Dark orange - headings, labels, links
+  \definecolor{brand}{HTML}{FC4C01}     % Portfolio orange - rules only
+  \definecolor{printtext}{HTML}{1A1A1A}
+  \definecolor{printmuted}{HTML}{5C5C5C}
+  \definecolor{printborder}{HTML}{E0E0E0}
+\fi
+
+\usepackage[colorlinks=true,urlcolor=accent,linkcolor=accent]{hyperref}
+\hypersetup{
+  pdftitle={Leonard Sambu - CV},
+  pdfauthor={Leonard Sambu},
+  pdfsubject={Security Researcher and Full-Stack Developer},
+  pdfkeywords={security, full-stack, React, TypeScript, Solidity, smart contracts, AI, Cloudflare}
+}
+
+% -------------------------------------------------------------------
+% Font aliases for semantic use (correct family names with T1 encoding)
+% -------------------------------------------------------------------
+\newcommand{\displayfont}{\fontfamily{SourceSerifPro-LF}\selectfont}
+\newcommand{\bodyfont}{\fontfamily{SourceSansPro-TLF}\selectfont}
+\newcommand{\monofont}{\fontfamily{SourceCodePro-TLF}\selectfont}
+
+% -------------------------------------------------------------------
+% Page Style
+% -------------------------------------------------------------------
+\pagestyle{empty}
+\ifdark\pagecolor{pagebg}\fi
+\color{printtext}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.22em}
+
+\setlist{
+  nosep,
+  left=1.1em,
+  labelindent=0pt,
+  listparindent=0pt,
+  itemsep=0.1em,
+  label=\textbullet
+}
+
+% -------------------------------------------------------------------
+% Section Formatting
+% -------------------------------------------------------------------
+\titleformat{\section}
+  {\displayfont\large\bfseries\color{accent}}
+  {}
+  {0em}
+  {}
+  [\vspace{-0.45em}{\color{printborder}\rule{\textwidth}{0.6pt}}]
+
+\titlespacing{\section}{0pt}{0.55em}{0.3em}
+
+% -------------------------------------------------------------------
+% Custom commands
+% -------------------------------------------------------------------
+% \role{Title}{Organisation}{Dates}
+\newcommand{\role}[3]{%
+  \par\needspace{3\baselineskip}\vspace{0.25em}%
+  {\displayfont\bfseries #1}\ {\color{printmuted}\textbar\ #2}%
+  \hfill{\small\color{printmuted}#3}\par\vspace{0.1em}%
+}
+
+% \project{Name: tagline}{link}{description}{stack}
+\newcommand{\project}[4]{%
+  \par\needspace{3\baselineskip}\vspace{0.2em}%
+  {\displayfont\bfseries #1}\hfill{\small #2}\par%
+  {\small #3}\par%
+  {\small\color{printmuted}\textit{#4}}\par%
+}
+
+% Skills row: label (top-aligned) | plain sentence + tools
+\newcommand{\skillrow}[3]{%
+  \textcolor{accent}{\textbf{#1}} & #2 {\color{printmuted}\textbar\ #3} \\[0.25em]
+}
+
+% -------------------------------------------------------------------
+% Document
+% -------------------------------------------------------------------
+\begin{document}
+\bodyfont
+
+% ========== HEADER ==========
+% Contact details use plain-text labels (no icons) so CV scanners read them correctly.
+\begin{center}
+  {\displayfont\bfseries\fontsize{26}{30}\selectfont Leonard Sambu\par}
+  \vspace{0.3em}
+  {\large\color{accent}Security Researcher \& Full-Stack Developer\par}
+  \vspace{0.45em}
+  \small
+  Kenya (UTC+3) \textperiodcentered\ Open to remote work \textperiodcentered\
+  Phone: +254 739 720 531 \textperiodcentered\
+  Email: \href{mailto:cheruiyootsambu@gmail.com}{cheruiyootsambu@gmail.com}\\[0.2em]
+  Portfolio: \href{https://llakterian.github.io}{llakterian.github.io} \textperiodcentered\
+  GitHub: \href{https://github.com/llakterian}{github.com/llakterian} \textperiodcentered\
+  LinkedIn: \href{https://linkedin.com/in/cheruiyoot-sambu}{linkedin.com/in/cheruiyoot-sambu}\\[0.2em]
+  YouTube: \href{https://www.youtube.com/@tech_ale7}{@tech\_ale7} \textperiodcentered\
+  TikTok: \href{https://www.tiktok.com/@tech_ale}{@tech\_ale} \textperiodcentered\
+  X: \href{https://x.com/llakterian}{@llakterian}
+\end{center}
+
+% ========== SUMMARY ==========
+\section{Summary}
+I build web apps and test software for security holes before attackers find them. I've launched live apps used by farmers and businesses, reviewed the code of 20+ blockchain projects, and taken part in 60+ bug bounty programs. I also build the tooling that decides whether an AI agent is ready to ship: automatic checks, a separate reviewer model, and a baseline that never quietly moves down. I've led teams in media, education and tech, and I make tech and AI videos on YouTube (\href{https://www.youtube.com/@tech_ale7}{@tech\_ale7}) and TikTok (\href{https://www.tiktok.com/@tech_ale}{@tech\_ale}).
+
+% ========== SKILLS ==========
+\section{Skills}
+\small
+\renewcommand{\arraystretch}{1.1}
+\begin{tabular}{@{}>{\RaggedRight}p{2.9cm} >{\RaggedRight\arraybackslash}p{14.3cm}@{}}
+\skillrow{Building apps}{I build full websites and apps, from screen to database, and launch them live.}{React, TypeScript, JavaScript, Node.js, Python, Flutter, REST APIs}
+\skillrow{Security testing}{I test websites and code for security holes and write clear reports on how to fix them.}{OWASP Top 10, penetration testing, code review, digital forensics, Nuclei}
+\skillrow{Blockchain}{I write and review smart contracts for payments, escrow and tokens.}{Solidity, Foundry, Hardhat, Slither}
+\skillrow{AI features}{I add AI to real products (assistants, content sorting, advice tools) and keep it safe and reliable, with automatic checks, an AI reviewer and a quality gate.}{Claude, Gemini, Groq, MCP, LLM evals}
+\skillrow{Cloud \& launch}{I put apps online, keep them fast, and automate testing and releases.}{Cloudflare, Docker, Supabase, Git, CI/CD}
+\skillrow{Leading people}{I run teams and projects, plan the work and keep clients updated.}{Agile/Scrum, Jira, Trello}
+\skillrow{Video \& media}{I edit video, direct live broadcasts and make AI video content.}{DaVinci Resolve, OBS Studio}
+\end{tabular}
+\normalsize
+
+% ========== EXPERIENCE ==========
+\section{Experience}
+
+\role{Technology Consultant \& Developer}{Self-employed}{Sep 2023 to Present}
+\begin{itemize}
+  \item Built and launched live business apps for Kenyan farms and dairy co-operatives (Maziwa Coop, Sambu Farm Manager), with secure logins and role-based access.
+  \item Rescued a client's hacked WordPress sites: removed a hidden backdoor and 8 fake admin accounts, and cut page load time from 30+ seconds to about 1 second.
+  \item Built a system that sends Facebook and Instagram ad leads straight into the client's CRM, with no duplicates and a 90-day history.
+  \item Wrote and security-tested smart contracts for client payment and escrow systems.
+\end{itemize}
+
+\role{Security Researcher \& Bug Bounty Hunter}{Independent}{2024 to Present}
+\begin{itemize}
+  \item Reviewed the code of 20+ blockchain projects (DeFi, stablecoins, bridges, lending) and took part in 40+ website bug bounty programs on HackenProof, Cantina, Bugcrowd, Intigriti and Immunefi.
+  \item Had findings accepted at every severity level, including bugs that put user funds at risk, a critical leak of personal data in a company dashboard, and a flaw that let one customer change another's records. Client names stay private under disclosure agreements.
+  \item Back every report with working proof: automated tests on a copy of the live blockchain, or step-by-step reproductions for websites.
+  \item Use AI agents to speed up code reviews, then check every finding by hand before reporting it.
+\end{itemize}
+
+\role{Tech \& AI Video Creator}{YouTube \& TikTok}{Ongoing}
+\begin{itemize}
+  \item Make tech explainers, AI-generated videos and blockchain-security tips on YouTube (\href{https://www.youtube.com/@tech_ale7}{@tech\_ale7}) and TikTok (\href{https://www.tiktok.com/@tech_ale}{@tech\_ale}), handling scripting, editing and sound myself.
+\end{itemize}
+
+\role{Project Manager}{SIZLAND Limited}{Nov 2025 to Mar 2026}
+\begin{itemize}
+  \item Ran sprint planning, daily stand-ups and reviews for a blockchain development team using Jira and Trello.
+  \item Delivered a 39,000-line AI content platform and a land-escrow system, with full handover documentation.
+  \item Acted as the main link between developers, management and outside partners.
+\end{itemize}
+
+\role{Game Developer (Charity Project)}{Jampack Incubator}{Feb 2026}
+\begin{itemize}
+  \item Built Mathlantis, a maths puzzle game for children, for Games for Love. Awarded ``Most Child Friendly Game''.
+\end{itemize}
+
+\role{Director \& Manager}{Sambu Academy}{Aug 2022 to Present}
+\begin{itemize}
+  \item Lead a team of teachers; introduced clear daily routines that raised productivity by about 30\%.
+\end{itemize}
+
+\role{Technical Director \& Firm Manager}{KASS Media}{Feb 2019 to Apr 2023}
+\begin{itemize}
+  \item Directed live TV broadcasts and studio production: cameras, sound, graphics, multi-camera switching and editing.
+  \item Managed technical budgets, equipment buying and suppliers for daily news, entertainment and live events; also ran logistics and building projects for the studios (2019 to 2022).
+  \item Trained junior staff and set up equipment maintenance routines that cut downtime by 40\%.
+\end{itemize}
+
+{\small\color{printmuted}\textbf{Earlier roles:} Passenger Handling Agent, Swissport Kenya (2011) \textperiodcentered\ Public Relations Attach\'{e}, KEMSA (2011)\par}
+
+% ========== PROJECTS ==========
+\section{Key Projects}
+{\small\color{printmuted}Live links below. More projects, screenshots and details at \href{https://llakterian.github.io/\#projects}{llakterian.github.io}.\par}
+
+\project{fluxharness: eval harness for AI agents}{\href{https://github.com/llakterian/flux}{github.com/llakterian/flux}}
+{Open-source mini eval harness: three agents pass typed, checked results to each other, ten deterministic guardrails score first, a separate larger model judges composition and taste, and a saved baseline turns "it worked once" into a regression check. 31 tests; a deliberately weakened copy of the workflow scores 0.000.}
+{Python, NVIDIA NIM, pytest, OpenAI-compatible API}
+
+\project{Sambu Farm Manager: farm management app}{\href{https://sambufarm-demo.pages.dev}{sambufarm-demo.pages.dev}}
+{Replaced a tea estate's paper payroll book (20 to 30 workers, 12 to 39 tonnes of tea a month). Works out piece-rate, daily and monthly pay in one place, plans livestock feed using official Kenyan nutrition tables, tracks expenses and works offline.}
+{React, Hono, Cloudflare Workers + D1, installable web app}
+
+\project{Maziwa Coop: dairy co-operative app}{\href{https://maziwa-coop.pages.dev}{maziwa-coop.pages.dev}}
+{Replaced paper milk records for dairy co-operatives. Logs daily deliveries, texts each farmer a confirmation by SMS, tracks credit and produces month-end reports.}
+{React, Hono, Cloudflare D1, Africa's Talking SMS}
+
+\project{Shambani: weather \& farming advice}{\href{https://shambani-app.pages.dev}{shambani-app.pages.dev}}
+{Weather for all 47 Kenyan counties with 7-day forecasts, plus AI farming advice based on official Kenyan agricultural guidelines.}
+{FastAPI, Cloudflare, Groq AI, Open-Meteo}
+
+\project{Uplift: good-news app}{\href{https://uplift.llakterian.workers.dev}{uplift.llakterian.workers.dev}}
+{Shows only positive stories, pulled from Reddit, Hacker News, Mastodon and RSS feeds and sorted by AI in English and Swahili. Installs like a phone app, works offline, sends push notifications and has a Telegram bot. Security built in: safe password storage, protected logins, rate limiting and a locked-down image proxy.}
+{React, TypeScript, Cloudflare Workers, D1, KV, Groq AI}
+
+\project{SafeShamba: safer land buying}{\href{https://safeshamba.us.ci}{safeshamba.us.ci}}
+{Holds a land buyer's money in a smart contract and only releases it after a notary and due-diligence checks approve each step.}
+{Solidity (tested with Foundry and Slither), React, Cloudflare}
+
+\project{QuitVaping: quit-vaping coach}{\href{https://quitvaping.netlify.app}{quitvaping.netlify.app}}
+{Helps people quit vaping: tracks progress, money saved and health recovery, with an AI coach and a guided breathing mode for cravings.}
+{Flutter, Supabase}
+
+\project{c0bw3b Toolkit: my own security scanner}{}
+{13,000 lines of Python that automatically maps a website and checks it for common security holes, then filters out false alarms. 107 automated tests.}
+{Python, Nuclei}
+
+% ========== CERTIFICATIONS ==========
+\section{Certifications}
+\small
+\begin{itemize}
+  \item \href{https://drive.google.com/file/d/1c48EGdqSb5MEZc-V16A7E3OrAWnvODHN/view?usp=drive_web}{Smart Contract Security; Solidity Smart Contract Development; Full Stack Web3 Development}, Cyfrin Updraft, 2024
+  \item \href{https://llakterian.github.io/certificate.pdf}{Generative AI Literacy (scored 92\%)}, Simplilearn SkillUP, 2026
+  \item CompTIA Cloud+ (CV0-003) Specialization, Coursera, in progress
+  \item Digital Forensics Masterclass (DFMC+), Udemy, 2024
+  \item \href{https://llakterian.github.io/Cybersecurity-Awareness-and-Innovation.pdf}{Cybersecurity Awareness and Innovation}, EIT Digital / Coursera, 2024
+  \item \href{https://llakterian.github.io/Insider-Threat-Awareness.pdf}{Insider Threat Awareness}; \href{https://llakterian.github.io/Establishing-Insider-Threat-Program.pdf}{Establishing an Insider Threat Program}; Cybersecurity Awareness, US DCSA / CDSE, 2022 to 2024
+  \item Ethereum Blockchain Programming, CryptoZombies, 2022
+\end{itemize}
+{\color{printmuted}Full list with certificates: \href{https://llakterian.github.io/\#certifications}{llakterian.github.io}\par}
+\normalsize
+
+% ========== EDUCATION ==========
+\section{Education}
+\small
+\begin{tabular}{@{}>{\RaggedRight}p{10.2cm} p{4.4cm} >{\raggedleft\arraybackslash}p{2.1cm}@{}}
+  \textbf{B.A. International Relations \& Diplomacy with I.T.} {\color{printmuted}(studies paused)} & Maseno University & from 2008 \\
+  \textbf{Certificate in HTML} & Star College & 2008 \\
+  \textbf{Kenya Certificate of Secondary Education} & Milimani High School & 2007
+\end{tabular}
+\normalsize
+
+\end{document}

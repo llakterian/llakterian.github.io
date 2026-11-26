@@ -2,3 +2,7 @@
 !favicon.png
 !og-image.png
 !profile.png
+cv/build/
+*.aux
+*.log
+*.out
