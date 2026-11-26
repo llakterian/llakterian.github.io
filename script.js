@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Scroll Reveal Animation — for .specimen-section elements
+    // Scroll Reveal Animation, for .specimen-section elements
     const revealElements = document.querySelectorAll('.specimen-section, .reveal');
     const revealOptions = {
         threshold: 0.05,

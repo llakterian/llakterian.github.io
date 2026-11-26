@@ -1,7 +1,7 @@
 /* Fonts are loaded from index.html (preload + non-blocking stylesheet). */
 
 /* ============================================================================
-   RARE UI DESIGN TOKENS — High-contrast dark, vibrant orange accent
+   RARE UI DESIGN TOKENS: High-contrast dark, vibrant orange accent
    ============================================================================ */
 :root {
   /* Rare UI Palette */
@@ -20,10 +20,10 @@
   --text-muted: #999999;
   --text-inverse: #121212;
 
-  --accent-primary: #fc4c01;      /* Vibrant orange — CTAs only */
+  --accent-primary: #fc4c01;      /* Vibrant orange: CTAs only */
   --accent-primary-dim: #e64500;  /* Hover */
-  --accent-secondary: #1a73f2;    /* Electric blue — status/secondary */
-  --accent-tertiary: #ffc83d;     /* Warm gold — badges/supporting */
+  --accent-secondary: #1a73f2;    /* Electric blue, status/secondary */
+  --accent-tertiary: #ffc83d;     /* Warm gold, badges/supporting */
   --accent-success: #34c759;      /* System green */
   --accent-error: #ff3b30;        /* System red */
 
@@ -160,7 +160,7 @@ button {
 }
 
 /* ============================================================================
-   SPECIMEN INDEX — Floating tab, expands on hover/focus
+   SPECIMEN INDEX: Floating tab, expands on hover/focus
    At rest: a thin tab showing only the numbers. On hover or keyboard focus,
    it expands to reveal the section labels. Never overlaps content because
    it is pinned to the viewport edge and content has a matching margin.
@@ -257,7 +257,7 @@ button {
 }
 
 /* ============================================================================
-   SPECIMEN LAYOUT — Asymmetric columns
+   SPECIMEN LAYOUT: Asymmetric columns
    ============================================================================ */
 .specimen-layout {
   /* Reserve the fully-expanded index width as a gutter so the hover-expanded
@@ -273,7 +273,7 @@ button {
   transform: translateY(0);
 }
 
-/* Section Header — Numbered left margin */
+/* Section Header: Numbered left margin */
 .section-header {
   display: flex;
   align-items: flex-end;
@@ -311,7 +311,7 @@ button {
 }
 
 /* ============================================================================
-   HERO SECTION — Squircle container, 100svh
+   HERO SECTION: Squircle container, 100svh
    ============================================================================ */
 .hero-section {
   min-height: min(100svh - 1.25rem, 60rem);
@@ -352,7 +352,7 @@ button {
   max-width: 480px;
 }
 
-/* Hero Stats — 3 column grid */
+/* Hero Stats: 3 column grid */
 .hero-stats {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
@@ -406,7 +406,7 @@ button {
   opacity: 0.6;
 }
 
-/* Hero CTA — Full radius buttons */
+/* Hero CTA: Full radius buttons */
 .hero-cta {
   display: flex;
   flex-wrap: wrap;
@@ -462,7 +462,7 @@ button {
 }
 
 /* ============================================================================
-   TILT CARD — beUI inspired 3D perspective on hover
+   TILT CARD, beUI inspired 3D perspective on hover
    ============================================================================ */
 .tilt-card {
   transform-style: preserve-3d;
@@ -475,7 +475,7 @@ button {
 }
 
 /* ============================================================================
-   FINDING CARDS — Security research section
+   FINDING CARDS: Security research section
    ============================================================================ */
 .finding-grid {
   display: grid;
@@ -582,7 +582,7 @@ button {
   color: var(--accent-primary);
 }
 
-/* Bouncy Accordion — beUI inspired */
+/* Bouncy Accordion, beUI inspired */
 .bouncy-accordion[open] .cert-chevron,
 .bouncy-accordion[open] .finding-chevron {
   transform: rotate(180deg);
@@ -667,7 +667,7 @@ button {
 }
 
 /* ============================================================================
-   AUDIT CARDS — Blockchain section
+   AUDIT CARDS: Blockchain section
    ============================================================================ */
 .audit-grid {
   display: grid;
@@ -973,7 +973,7 @@ button {
 }
 
 /* ============================================================================
-   TIMELINE — Experience section
+   TIMELINE: Experience section
    ============================================================================ */
 .timeline {
   position: relative;
@@ -1063,7 +1063,7 @@ button {
 }
 
 /* ============================================================================
-   CERTIFICATIONS — Bouncy Accordion grid
+   CERTIFICATIONS: Bouncy Accordion grid
    ============================================================================ */
 .cert-category {
   margin-bottom: var(--space-2xl);
@@ -1174,7 +1174,7 @@ button {
 }
 
 /* ============================================================================
-   SKILLS GRID — Portfolio
+   SKILLS GRID: Portfolio
    ============================================================================ */
 .skills-grid {
   display: grid;
@@ -1410,7 +1410,7 @@ button {
 }
 
 /* ============================================================================
-   ANIMATED NUMBER — Count-up
+   ANIMATED NUMBER: Count-up
    ============================================================================ */
 .animated-number {
   display: inline-block;
@@ -1698,7 +1698,7 @@ button {
 }
 
 /* ============================================================================
-   HERO IDENTITY — Name & Title
+   HERO IDENTITY: Name & Title
    ============================================================================ */
 .hero-identity {
   margin-bottom: var(--space-2xl);
